@@ -66,7 +66,7 @@ def objective_composite(trial):
     
     # Composite objective: error + alpha * (number of steps)
     # Using number of steps as a proxy for computational cost: n_steps = T / dt
-    alpha = 0.001  # weight for the cost term
+    alpha = 0.0009  # weight for the cost term
     # cost = np.log(T / dt)
     cost = T / dt  # number of steps (cost)
     composite_objective = error + alpha * cost
@@ -74,7 +74,7 @@ def objective_composite(trial):
 
 # Optimize using the composite objective approach
 study_composite = optuna.create_study(direction="minimize")
-study_composite.optimize(objective_composite, n_trials=100)
+study_composite.optimize(objective_composite, n_trials=50)
 
 best_dt_composite = study_composite.best_params["dt"]
 print("Composite Approach - Best time step (dt):", best_dt_composite)
@@ -109,13 +109,16 @@ ax1.legend()
 # Plot the best solution trajectory in the right subplot
 ax2 = fig.add_subplot(122, projection='3d')
 ax2.plot(best_solution[:, 0], best_solution[:, 1], best_solution[:, 2],
-         lw=0.5, color='r', label="Best Solution Trajectory")
+         lw=0.5, color='r',
+         label=f"Best Solution\n(dt={best_dt_composite:.4f}, Mean Euclidean Error={mean_error:.4f})")
 ax2.set_title("Best Solution Trajectory")
 ax2.set_xlabel("X")
 ax2.set_ylabel("Y")
 ax2.set_zlabel("Z")
 ax2.legend()
 
+
 plt.suptitle(f"Mean Euclidean Error: {mean_error:.4f}")
 plt.tight_layout()
+plt.savefig("1.2.1/images/optuna_lorenz_3d.png", dpi=300)
 plt.show()
