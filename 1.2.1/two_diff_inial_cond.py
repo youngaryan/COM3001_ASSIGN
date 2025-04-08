@@ -23,12 +23,12 @@ def rk4_integration(func, state0, dt, steps):
 
 # Parameters
 initial_conditions = [
-    np.array([0.01, 2.0, 1.0]),
-    np.array([0.001, 2.0, 1.0])  # slightly perturbed
+    np.array([0.1, 2.0, 1.0]),
+    np.array([0.01, 2.0, 1.0])  # slightly perturbed
 ]
-labels = ["Initial Condition 1", "Initial Condition 2"]
+labels = ["Initial Condition 1 (0.1, 2.0, 1.0)", "Initial Condition 2 (0.01, 2.0, 1.0)"]
 tmax = 40.0
-dt = 0.01
+dt = 0.0073
 steps = int(tmax / dt)
 t = np.linspace(0, tmax, steps)
 
@@ -36,15 +36,15 @@ t = np.linspace(0, tmax, steps)
 trajectories = [rk4_integration(lorenz, ic, dt, steps) for ic in initial_conditions]
 
 # Plot 2D phase space (x vs z) - separate subplots
-fig2d, axs2d = plt.subplots(1, 2, figsize=(14, 6), constrained_layout=True)
-fig2d.suptitle("Lorenz Attractor: x vs z for Two Initial Conditions", fontsize=16, weight='bold')
-for i, ax in enumerate(axs2d):
-    ax.plot(trajectories[i][:, 0], trajectories[i][:, 2], color='black', lw=0.8)
-    ax.set_title(labels[i], fontsize=12)
-    ax.set_xlabel("x")
-    ax.set_ylabel("z")
-    ax.grid(True, linestyle='--', alpha=0.5)
-fig2d.savefig("1.1.4/images/two_initial_conditions_xz_separate.png", dpi=300)
+# fig2d, axs2d = plt.subplots(1, 2, figsize=(14, 6), constrained_layout=True)
+# fig2d.suptitle("Lorenz Attractor: x vs z for Two Initial Conditions", fontsize=16, weight='bold')
+# for i, ax in enumerate(axs2d):
+#     ax.plot(trajectories[i][:, 0], trajectories[i][:, 2], color='black', lw=0.8)
+#     ax.set_title(labels[i], fontsize=12)
+#     ax.set_xlabel("x")
+#     ax.set_ylabel("z")
+#     ax.grid(True, linestyle='--', alpha=0.5)
+# fig2d.savefig("1.1.4/images/two_initial_conditions_xz_separate.png", dpi=300)
 plt.show()
 
 # Plot 3D phase space - separate subplots

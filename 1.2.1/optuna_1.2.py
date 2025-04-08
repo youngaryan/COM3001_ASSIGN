@@ -2,7 +2,6 @@ import numpy as np
 import optuna
 import matplotlib.pyplot as plt
 import time
-from mpl_toolkits.mplot3d import Axes3D  # For 3D plotting
 
 # Lorenz system parameters
 sigma = 10.0
