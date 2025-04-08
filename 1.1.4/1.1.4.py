@@ -32,8 +32,8 @@ def rk4_integration(func, state0, dt, steps):
 # Simulation parameters
 state0 = np.array([1.0, 1.0, 1.0])
 tmax = 40.0
-dt_values = [0.001, 0.01, 0.1]  # different time step sizes
-# dt_values = np.round(np.logspace(-3, -1, num=1000), 3)
+# dt_values = [0.001, 0.01, 0.1]  # different time step sizes
+dt_values = np.round(np.logspace(-3, -2, num=1000), 3)
 # dt_values = np.arange(0.001, 0.1, 0.05)  # dt from 0.001 to 0.1 in steps of 0.01
 methods = {"Euler": euler_integration, "RK4": rk4_integration}
 
