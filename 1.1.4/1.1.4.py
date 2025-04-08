@@ -33,9 +33,10 @@ def rk4_integration(func, state0, dt, steps):
 state0 = np.array([1.0, 1.0, 1.0])
 tmax = 40.0
 # dt_values = [0.001, 0.01, 0.1]  # different time step sizes
-dt_values = np.round(np.logspace(-3, -2, num=1000), 3)
+dt_values = np.round(np.logspace(-3, 1, num=100), 3)
 # dt_values = np.arange(0.001, 0.1, 0.05)  # dt from 0.001 to 0.1 in steps of 0.01
-methods = {"Euler": euler_integration, "RK4": rk4_integration}
+# methods = {"Euler": euler_integration, "RK4": rk4_integration}
+methods = { "RK4": rk4_integration}
 
 # Run simulations for each method and each dt
 results = {}
@@ -90,7 +91,9 @@ for method_name, method_func in methods.items():
 # -----------------------------------------------------------
 # Here we compare each simulation (for dt > 0.001) to the reference simulation (dt = 0.001)
 # by computing the average Euclidean norm difference between the state trajectories.
-errors = {"Euler": {}, "RK4": {}}
+# errors = {"Euler": {}, "RK4": {}}
+errors = { "RK4": {}}
+
 ref_dt = 0.001  # reference time step
 for method_name, method_results in results.items():
     t_ref, states_ref = method_results[ref_dt]
