@@ -67,7 +67,8 @@ def objective_composite(trial):
     # Composite objective: error + alpha * (number of steps)
     # Using number of steps as a proxy for computational cost: n_steps = T / dt
     alpha = 0.001  # weight for the cost term
-    cost = T / dt
+    # cost = np.log(T / dt)
+    cost = T / dt  # number of steps (cost)
     composite_objective = error + alpha * cost
     return composite_objective
 

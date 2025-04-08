@@ -50,22 +50,41 @@ for method_name, method_func in methods.items():
 # -------------------------
 # Figure 1: Phase Portraits
 # -------------------------
-fig1, axs1 = plt.subplots(2, 3, figsize=(18, 10), constrained_layout=True)
-fig1.suptitle("Lorenz Attractor Phase Portraits: Comparison of Numerical Methods", fontsize=20, weight='bold')
+# fig1, axs1 = plt.subplots(2, 3, figsize=(18, 10), constrained_layout=True)
+# fig1.suptitle("Lorenz Attractor Phase Portraits: Comparison of Numerical Methods", fontsize=20, weight='bold')
 
-for i, (method_name, method_results) in enumerate(results.items()):
-    for j, dt in enumerate(dt_values):
-        t, states = method_results[dt]
-        ax = axs1[i, j]
-        ax.plot(states[:, 0], states[:, 2], lw=0.5, color='black')
-        ax.set_title(f"{method_name} (dt = {dt})", fontsize=12)
-        ax.set_xlabel("x", fontsize=10)
-        ax.set_ylabel("z", fontsize=10)
-        ax.tick_params(axis='both', labelsize=8)
-        ax.grid(True, linestyle='--', alpha=0.5)
-fig1.savefig("1.1.4\images\phase_portraits.png", dpi=300)
-plt.show()
+# for i, (method_name, method_results) in enumerate(results.items()):
+#     for j, dt in enumerate(dt_values):
+#         t, states = method_results[dt]
+#         ax = axs1[i, j]
+#         ax.plot(states[:, 0], states[:, 2], lw=0.5, color='black')
+#         ax.set_title(f"{method_name} (dt = {dt})", fontsize=12)
+#         ax.set_xlabel("x", fontsize=10)
+#         ax.set_ylabel("z", fontsize=10)
+#         ax.tick_params(axis='both', labelsize=8)
+#         ax.grid(True, linestyle='--', alpha=0.5)
+# fig1.savefig("1.1.4\images\phase_portraits.png", dpi=300)
+# plt.show()
 
+
+# fig1 = plt.figure(figsize=(18, 10), constrained_layout=True)
+# fig1.suptitle("Lorenz Attractor 3D Phase Portraits: Comparison of Numerical Methods", fontsize=20, weight='bold')
+
+# plot_index = 1  # subplot counter for add_subplot
+
+# for method_name, method_results in results.items():
+#     for dt in dt_values:
+#         t, states = method_results[dt]
+#         ax = fig1.add_subplot(2, 3, plot_index, projection='3d')
+#         ax.plot(states[:, 0], states[:, 1], states[:, 2], lw=0.5, color='black')
+#         ax.set_title(f"{method_name} (dt = {dt})", fontsize=12)
+#         ax.set_xlabel("X")
+#         ax.set_ylabel("Y")
+#         ax.set_zlabel("Z")
+#         plot_index += 1
+
+# fig1.savefig("1.1.4/images/phase_portraits_3d.png", dpi=300)
+# plt.show()
 # -----------------------------------------------------------
 # Figure 2: Quantitative Comparison of Simulation Accuracy
 # -----------------------------------------------------------
@@ -89,15 +108,54 @@ for method_name, method_results in results.items():
             errors[method_name][dt] = avg_error
 
 # Plot the average error vs. time step for each method
+# fig3, ax3 = plt.subplots(figsize=(10, 6))
+# for method_name, error_dict in errors.items():
+#     dt_list = sorted(error_dict.keys())
+#     error_list = [error_dict[dt] for dt in dt_list]
+#     ax3.plot(dt_list, error_list, marker='o', label=method_name)
+# ax3.set_title("Average Euclidean Error vs. Time Step (Reference: dt = 0.001)", fontsize=14)
+# ax3.set_xlabel("Time Step (dt)", fontsize=12)
+# ax3.set_ylabel("Average Euclidean Error", fontsize=12)
+# ax3.grid(True, linestyle='--', alpha=0.5)
+# ax3.legend(fontsize=10)
+# fig3.savefig("1.1.4\images\error_comparison.png", dpi=300)
+# plt.show()
+
+
+# Plot the average error vs. time step for each method
 fig3, ax3 = plt.subplots(figsize=(10, 6))
+total_errors = {}  # To store total average error per method
+
 for method_name, error_dict in errors.items():
     dt_list = sorted(error_dict.keys())
-    error_list = [error_dict[dt] for dt in dt_list]
-    ax3.plot(dt_list, error_list, marker='o', label=method_name)
+    error_list = []
+    for dt in dt_list:
+        err = error_dict[dt]
+        # Handle inf/nan in the error values
+        if np.isnan(err) or np.isinf(err):
+            error_list.append(np.nan)
+        else:
+            error_list.append(err)
+
+    # Compute total average error excluding nan and ref_dt
+    non_ref_errors = [
+        error for dt, error in error_dict.items()
+        if dt != ref_dt and not np.isnan(error) and not np.isinf(error)
+    ]
+    total_avg_error = np.mean(non_ref_errors) if non_ref_errors else float('nan')
+    total_errors[method_name] = total_avg_error
+
+    # Legend label with error
+    label_with_error = f"{method_name} (Avg Error: {total_avg_error:.4f})" if not np.isnan(total_avg_error) else f"{method_name} (Unstable)"
+    
+    # Plot
+    ax3.plot(dt_list, error_list, marker='o', label=label_with_error)
+
+# Final plot labels
 ax3.set_title("Average Euclidean Error vs. Time Step (Reference: dt = 0.001)", fontsize=14)
 ax3.set_xlabel("Time Step (dt)", fontsize=12)
 ax3.set_ylabel("Average Euclidean Error", fontsize=12)
 ax3.grid(True, linestyle='--', alpha=0.5)
 ax3.legend(fontsize=10)
-fig3.savefig("1.1.4\images\error_comparison.png", dpi=300)
+fig3.savefig("1.1.4/images/error_comparison.png", dpi=300)
 plt.show()
