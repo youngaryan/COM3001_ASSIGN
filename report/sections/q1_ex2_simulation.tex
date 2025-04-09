@@ -1,0 +1,48 @@
+\section{Exercise 2: Selecting a Numerical Method and Demonstrating Chaotic Behavior}
+
+\subsubsection{Selection of Numerical Method and Time Step}
+Based on the analyses in Exercises 1.2.4 and 1.2.5, I have chosen the Fourth-Order Runge-Kutta (RK4) method for simulating the Lorenz system.
+The choice of the RK4 method is supported by the following considerations:
+
+\begin{itemize}
+    \item \textbf{Accuracy:} As illustrated in Figure \ref{fig:error_comparison_same_times} and Table \ref{tab:integration_methods}, the RK4 method exhibits substantially lower local truncation errors compared to the Euler method, making it more reliable in capturing the intricate dynamics of the system.
+    \item \textbf{Stability:} Experimental results (see Figure \ref{fig:lorenz_error1000}) indicate that the Euler method becomes unstable for time steps exceeding \(\Delta t > 0.025\). In contrast, RK4 remains stable even for time steps as large as \(\Delta t = 0.13\) (see \ref{fig:error_comparison_rk4_stable_0.13}), proving its robustness for simulating chaotic systems.
+    \item \textbf{Computational Efficiency:} Although smaller time steps can improve accuracy, they also lead to higher computational costs. To strike an appropriate balance between accuracy and efficiency, I employed a hyperparameter optimization approach using the Optuna library \cite{akiba2019optuna} (see also my implementation in \cite{youngaryanOptunaCode}). A sensitivity analysis was conducted by varying \(\Delta t\) using the objective function (\ref{eq:composite_objective}). This analysis confirmed that a time step of \(\Delta t = 0.0073\) (see Figure \ref{fig:optuna_lorenz_3d} for comparison).
+\end{itemize}
+
+\noindent
+Optimization was guided by a \textbf{composite objective function}, which incorporates both the simulation error and a proxy for computational cost:
+
+% \begin{equation}
+% \text{Error} = \frac{1}{N} \sum_{i=1}^{N} \left\| \mathbf{x}_{\text{sim}}(t_i) - \mathbf{x}_{\text{ref}}(t_i) \right\|_2
+% \label{eq:mean_euclidean_error}
+% \end{equation}
+\begin{equation}
+\text{Composite Objective} = \frac{1}{N} \sum_{i=1}^{N} \left\| \mathbf{x}_{\text{sim}}(t_i) - \mathbf{x}_{\text{ref}}(t_i) \right\|_2 + \alpha \cdot \left( \frac{T}{\Delta t} \right)
+\label{eq:composite_objective}
+\end{equation}
+
+\begin{align*}
+\text{where:} \quad
+& \mathbf{x}_{\text{sim}}(t_i) \text{ is the simulated state at time } t_i, \\
+& \mathbf{x}_{\text{ref}}(t_i) \text{ is the reference state at time } t_i, \\
+& N \text{ is the number of time steps in the simulation}, \\
+& \left\| \cdot \right\|_2 \text{ denotes the Euclidean (L2) norm}, \\
+& \alpha \text{ is a weighting factor for the cost term, with } \alpha = 0.0009 \text{ in this case}, \\
+& T \text{ is the total simulation time}, \\
+& \Delta t \text{ is the time step used.}
+\end{align*}
+
+\noindent
+This formulation encourages the optimizer to select a time step that balances simulation accuracy with computational efficiency, avoiding excessively fine resolutions. However, its performance may depend on the specific weighting parameter $\alpha$ (manually tuned here) and the reference system used.
+
+
+\subsubsection{Generation and Analysis of Phase Portraits}
+To demonstrate the characteristic chaotic behavior ("butterfly effect") of the Lorenz system, I have chosen two similar initial conditions of (0.01, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of \(\Delta t = 0.0073\).
+
+Figures \ref{fig:two_initial_conditions_3d_separate}, \ref{fig:two_initial_conditions_3d_separate_2} and \ref{fig:two_initial_conditions_3d_separate_3} display these phase portraits. Although the initial conditions differ only in the $x$ component by a small amount, the resulting trajectories clearly exhibit chaotic divergence over time, Both portraits exhibit the same broad “butterfly” structure, but their trajectories do not remain synchronized. As time goes on, the small difference amplifies until the solutions appear uncorrelated.
+
+\subsection{What Does It Mean for a System to Be Chaotic?}
+A chaotic system is a deterministic system that is unpredictable and seemingly random behavior due to its extreme sensitivity to initial conditions. This means that even very small differences in starting conditions can lead to completely different outcomes over time. Such systems are characterized by aperiodic long-term behavior, meaning they do not settle into regular cycles, and their evolution over time appears disorderly despite being governed by deterministic laws.
+
+for more details on variances in in the initial condition more details can be found in theb \textbf{Generation and Analysis of Phase Portraits} section.

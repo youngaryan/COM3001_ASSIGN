@@ -1,0 +1,55 @@
+% \documentclass[journal]{article}
+
+% \usepackage[backend=biber,style=numeric]{biblatex}
+% \addbibresource{references.bib}
+% \bibliography{references.bib}
+% \usepackage{amsmath}
+% \usepackage{graphicx}
+% \usepackage{subfiles} % <--- This enables modular files
+% \usepackage{caption}
+% \usepackage{float}
+
+
+\documentclass[11pt,oneside]{book}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{setspace}
+\usepackage[toc,page]{appendix}
+\usepackage{amsmath}
+\usepackage[none]{hyphenat} % turn hyphenation off by default
+\usepackage{graphicx}
+% \usepackage{tabularx}
+
+
+\title{COM3001 Assignment}
+\author{Aryan Golbaghi \\
+Department of Computer Science, University of Sheffield \\
+Sheffield, England \\
+\texttt{agolbaghi1@sheffield.ac.uk}}
+
+\markboth{Aryan Golbaghi}{COM3001 Assignment}
+
+\begin{document}
+
+\maketitle
+\newpage
+\mainmatter
+\chapter{Question 1: Dynamical systems}
+\newpage
+% \input{sections/q1_ex1_lorenz.tex}
+% \input{sections/q1_ex2_simulation.tex}
+\chapter{Question 2: Prey-Predator System}
+\newpage
+\input{sections/q2_ex1.tex}
+
+
+\clearpage
+\listoffigures
+\input{figures/fig}
+\listoftables
+\input{figures/table}
+
+\bibliographystyle{acm} 
+\bibliography{references} 
+% \printbibliography
+
+\end{document}

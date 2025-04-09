@@ -1,0 +1,40 @@
+\begin{table}[h]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Method} & \textbf{Global Error} & \textbf{Pros} & \textbf{Cons} \\ \hline
+Explicit Euler & $O(\Delta t)$ & Simple; low computational cost per step; easy to implement & Poor stability for larger $\Delta t$ in chaotic regimes; error accumulates linearly \\ \hline
+RK4 & $O(\Delta t^4)$ & Higher accuracy and stability; better error control over fixed step sizes & More computationally expensive per step; increased complexity compared to Euler \\ \hline
+Adaptive Methods (e.g., RK45) & Varies with adaptive step-size & Dynamically adjusts $\Delta t$ based on error; accurate and efficient in varying dynamics & More complex; computational overhead for step adjustment \\ \hline
+\end{tabular}%
+}
+\caption{Comparison of Integration Methods}
+\label{tab:integration_methods}
+\end{table}
+
+
+
+\begin{table}[h!]
+    \centering
+    \label{tab:diff_two_models_predator_prey}
+    \begin{tabular}{|l|p{4.5cm}|p{4.5cm}|}
+    \hline
+    \textbf{Feature} & \textbf{Agent-Based Modeling (ABM)} & \textbf{Equation-Based Modeling (EBM)} \\
+    \hline
+    Modeling Units & Represents individual agents, such as each rabbit or fox, capturing their unique behaviors and interactions. & Models populations as continuous variables, focusing on aggregate properties rather than individual entities. \\
+    \hline
+    Stochasticity & Incorporates a high degree of randomness in agents' movements, births, deaths and so on. & Typically deterministic. \\
+    \hline
+    Spatiality & Explicitly models space, allowing agents to move and interact within an environment (in our case, a 2D environment). & Generally lacks spatial modeling. \\
+    \hline
+    Emergence & Enables emergent patterns from simple interaction rules among agents. & Patterns are outcomes of governing equations; less emphasis on emergence. \\
+    \hline
+    Complex Interactions & Models diverse and complex behaviors at the individual level. & Simplifies interactions by averaging behaviors across the population. \\
+    \hline
+    Realism & More biologically realistic, but computationally expensive. & Abstract, analytically tractable, and computationally less expensive, but may lack individual-level detail. \\
+    \hline
+    \end{tabular}
+    \caption{Comparison of Agent-Based Modeling (ABM) and Equation-Based Modeling (EBM)}
+\end{table}
+

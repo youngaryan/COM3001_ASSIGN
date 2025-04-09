@@ -1,0 +1,125 @@
+\begin{thebibliography}{10}
+
+\bibitem{akiba2019optuna}
+{\sc Akiba, T., Sano, S., Yanase, T., Ohta, T., and Koyama, M.}
+\newblock Optuna: A next-generation hyperparameter optimization framework.
+\newblock https://optuna.org/, 2019.
+\newblock Accessed: 2025-04-07.
+
+\bibitem{armaos2024quantumcomputingatmosphericdynamics}
+{\sc Armaos, V., Argiriou, A.~A., and Kioutsioukis, I.}
+\newblock Quantum computing and atmospheric dynamics: Exploring the lorenz
+  system, 2024.
+
+\bibitem{youngaryanerror_comparison_rk4_stable_0.13sCode}
+{\sc Golbaghi, A.}
+\newblock error_comparison_rk4_stable_0.13.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/error_comparison_rk4_stable_0.13.png,
+  2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{youngaryanLorenzError1.1.41000_image}
+{\sc Golbaghi, A.}
+\newblock Lorenz attractor error 1000 time steps.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/error_comparison1000.png,
+  2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{youngaryanLorenzPlot1.1.4}
+{\sc Golbaghi, A.}
+\newblock Lorenz attractor visualization.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/1.1.4.py, 2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{youngaryanOptunaCode}
+{\sc Golbaghi, A.}
+\newblock Lorenz attractor visualization.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.2.1/optuna_1.2.py,
+  2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{youngaryanLorenzPlot1.1.4_image}
+{\sc Golbaghi, A.}
+\newblock Lorenz attractor visualization.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/phase_portraits.png,
+  2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{youngaryanLorenzError1.1.4_image}
+{\sc Golbaghi, A.}
+\newblock Lorenz attractor visualization error 3 steps.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/error_comparison.png,
+  2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{youngaryanoptunaComparisonImage}
+{\sc Golbaghi, A.}
+\newblock optunacomparisonimage.13.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.2.1/images/optuna_lorenz_3d.png,
+  2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{youngaryantwo_initial_conditions_3d_2separateICode}
+{\sc Golbaghi, A.}
+\newblock youngaryantwo_initial_conditions_3d_2separateicode.13.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/two_initial_conditions_3d_separate_2.png,
+  2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{youngaryantwo_initial_conditions_3d_3separateICode}
+{\sc Golbaghi, A.}
+\newblock youngaryantwo_initial_conditions_3d_3separateicode.13.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/two_initial_conditions_3d_separate_3.png,
+  2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{youngaryantwo_initial_conditions_3d_separateICode}
+{\sc Golbaghi, A.}
+\newblock youngaryantwo_initial_conditions_3d_separateicode.13.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.2.1/two_diff_initial_cond.py,
+  2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{youngaryantwo_initial_conditions_3d_separateImg}
+{\sc Golbaghi, A.}
+\newblock youngaryantwo_initial_conditions_3d_separateimg.
+\newblock
+  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/two_initial_conditions_3d_separate.png,
+  2025.
+\newblock Accessed: 2025-04-01.
+
+\bibitem{kashyap2024lorenz}
+{\sc Kashyap, S.~S., Dandekar, R.~A., Dandekar, R., and Panat, S.}
+\newblock Modeling chaotic lorenz ode system using scientific machine learning.
+\newblock https://arxiv.org/abs/2410.06452v1, 2024.
+\newblock arXiv:2410.06452v1 [cs.LG], 09 Oct 2024.
+
+\bibitem{1963JAtS...20..130L}
+{\sc Lorenz, E.~N.}
+\newblock Deterministic nonperiodic flow.
+\newblock {\em Journal of the Atmospheric Sciences 20}, 2 (Mar. 1963),
+  130--148.
+
+\bibitem{Pathak_2017}
+{\sc Pathak, J., Lu, Z., Hunt, B.~R., Girvan, M., and Ott, E.}
+\newblock Using machine learning to replicate chaotic attractors and calculate
+  lyapunov exponents from data.
+\newblock {\em Chaos: An Interdisciplinary Journal of Nonlinear Science 27}, 12
+  (Dec. 2017).
+
+\bibitem{apsLorenz2003}
+{\sc Society, A.~P.}
+\newblock Lorenz and the butterfly effect, 2003.
+\newblock Accessed: 2025-04-01.
+
+\end{thebibliography}

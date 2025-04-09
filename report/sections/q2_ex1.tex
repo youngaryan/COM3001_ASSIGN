@@ -1,0 +1,90 @@
+\section{Simulate the prey-predator model}
+
+The result of the prey-predator simulation can be found at Figures (\ref{fig:Ecolab_pred_prey}, \ref{fig:Ecolab_pred_prey_no_foxes}), here is a description of the simulation:
+
+In the simulation, we can see an oscillatory behavior of the populations, which is a characteristic feature of predator-prey dynamics.
+\begin{itemize}
+    \item Grass (black curve) grows, fueling an increase in Rabbits (orange).
+    \item As rabbits grow numbers, Foxes (blue) find abundant prey, so fox numbers grow.
+    \item Increasing the number of rabbits will cause to decrease the amount of grass (this is seen in Figure \ref{fig:Ecolab_pred_prey_no_foxes} too).
+    \item Once foxes grow in numbers and the grass amount decreases because of the population of rabbits, the population of rabbits will decrease.
+    \item As the number of rabbits decreases, the foxes will have less food, leading to a decrease in their population.
+    \item as there is less rabbits, the grass will grow again, and the cycle will repeat.
+\end{itemize}
+
+The intreating findings I can see from this simulation is even though the agent based model includes randomized movement and local interactions, the overall population still exhibits an oscillatory up and down cycles, similar to what we see in standard predator prey models (Lotka Volterra curves which mentioned in the lectures).
+
+
+\section{Differences between Agent Based Modeling vs Equation Based Modeling}
+
+In a classical equation based (ODE) predator prey model, such as Lotka Volterra equations:
+\[
+\left\{
+\begin{aligned}
+\frac{dx}{dt} &= x(\alpha - \beta y) \\
+\frac{dy}{dt} &= y(\delta x - \gamma)
+\end{aligned}
+\right.
+\qquad
+\begin{aligned}
+\alpha &> 0, \quad \text{Reproduction prey} \\
+\beta &> 0, \quad \text{Predation} \\
+\gamma &> 0, \quad \text{Extinction predator} \\
+\delta &> 0, \quad \text{Reproduction predator}
+\end{aligned}
+\]
+
+populations are treated as continuous, homogeneous averages. By contrast, agent based models (ABMs) track individual rabbits and foxes.
+I have summarized the key differences between these two models in the following (see this table \ref{tab:diff_two_models_predator_prey}):
+
+\begin{itemize}
+    \item \textbf{Spatial Heterogeneity}
+    \begin{itemize}
+        \item \textbf{ABM:} Rabbits and foxes move around, so local depletion of grass or clustering of rabbits affects local outcomes. Some regions can be overgrazed or overhunted while others remain safe havens, and these local effects alter the overall population dynamics.
+        \item \textbf{ODE:} Assumes well mixed populations with no spatial structure. Grass, rabbits, and foxes interact uniformly in a single compartment.
+    \end{itemize}
+    
+    \item \textbf{Discrete and Stochastic Interactions}
+    \begin{itemize}
+        \item \textbf{ABM:} Each eating or breeding event is discrete. Foxes may or may not successfully catch a rabbit (random probability), and rabbits may or may not find enough grass. This random element leads to fluctuations around the average trend.
+        \item \textbf{ODE:} Uses deterministic rate equations; there is no randomness in who gets eaten or how far you can move.
+    \end{itemize}
+    
+    \item \textbf{Individual Traits and Thresholds}
+    \begin{itemize}
+        \item \textbf{ABM:} Each agent has individual properties such as an internal food store, an age, and breeding frequency. Once a rabbit's internal food is depleted, it dies—even if the average rabbit might have enough food.
+        \item \textbf{ODE:} Tracks the average rate of consumption and reproduction. There is no notion of an individual's internal energy or local shortage.
+    \end{itemize}
+    
+    \item \textbf{Emergent Behavior and Local Extinction}
+    \begin{itemize}
+        \item \textbf{ABM:} Because movement is localized, pockets of rabbits or foxes can go extinct locally while others flourish elsewhere. Over time, random events can create drastically different patterns across multiple simulations.
+        \item \textbf{ODE:} Typically yields a single smooth trajectory for each initial condition—no chance of a local "pocket" dying off on its own.
+    \end{itemize}
+    
+    \item \textbf{Complexity vs. Analytical Tractability}
+    \begin{itemize}
+        \item \textbf{ABM:} More realistic in capturing how individuals actually move, eat, and breed, but more complex and computationally intensive. Hard to get a neat "closed form" solution.
+        \item \textbf{ODE:} Mathematically elegant with known analysis techniques (e.g., stability analysis, limit cycles). Faster to run and simpler to interpret but less nuanced spatially and individually.
+    \end{itemize}
+\end{itemize}
+
+\subsection[short]{Why Do Results Differ Across Runs?}
+
+\begin{itemize}
+    \item \textbf{Random Initial Conditions}
+    \begin{itemize}
+        \item Each run places rabbits and foxes at random locations in the grid.
+        \item Grass regeneration also occurs in randomly chosen cells.
+    \end{itemize}
+
+    \item \textbf{Probabilistic Movement and Interactions}
+    \begin{itemize}
+        \item Rabbits choose random directions if no grass is found in sight.
+        \item Foxes move randomly and only sometimes succeed in catching a rabbit (based on a probability that depends on the distance).
+        \item Each new rabbit or fox gets a random starting age, This affects how soon they die or reproduce.
+    \end{itemize}
+
+\end{itemize}
+
+\subsection[short]{Simulating the ABM Model to Monitor the Change of Key Variables}
