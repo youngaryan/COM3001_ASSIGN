@@ -88,3 +88,28 @@ I have summarized the key differences between these two models in the following 
 \end{itemize}
 
 \subsection[short]{Simulating the ABM Model to Monitor the Change of Key Variables}
+Here I have considered the following key variables, recorded across 100 simulation runs of the ABM. This information helps us evaluate the sustainability of an environment by revealing population dynamics and resource availability over time. Analyzing these trends can support better ecological understanding and inform strategies to prevent long-term or permanent environmental damage (please see Table~\ref{tab:simulation_stats_2.1} for the summary statistics of these variables and Figure~\ref{fig:boxplot_metrics_100_sim} for their distributions).
+
+\begin{itemize}
+    \item \textbf{Final Grass:} The total amount of grass available in the environment at the end of the full run of each simulation.
+    
+    \item \textbf{Final Rabbits:} The number of rabbits alive at the end of the full run of each simulation. This indicates if the rabbit population sustains itself or collapses over time.
+    
+    \item \textbf{Final Foxes:} The number of foxes alive at the end of the full run of each simulation. This helps determine whether the predator population can persist or dies out due to lack of prey.
+    
+    \item \textbf{Peak Grass:} The maximum amount of grass observed at any point during a simulation run.
+    
+    \item \textbf{Peak Rabbits:} The highest number of rabbits observed during a simulation run. This reflects the peak of reproduction and food availability.
+    
+    \item \textbf{Peak Foxes:} The maximum number of foxes observed during a simulation run. It shows the extent the predator population grows, in response to abundant prey.
+    
+    \item \textbf{Min Grass:} The lowest amount of grass recorded during the simulation. This indicates how depleted the resource can become due to overpopulation of rabbits.
+    
+    \item \textbf{Min Rabbits:} The minimum number of rabbits observed at any point. A value of zero suggests a population collapse or local extinction event.
+    
+    \item \textbf{Min Foxes:} The lowest number of foxes observed during a simulation. A minimum of zero suggests predator extinction, due to insufficient rabbit populations.
+\end{itemize}
+
+In Table~\ref{tab:simulation_stats_2.1}, we observe that the system generally maintains ecological stability over the course of the simulations. The minimum amount of grass never reaches zero, which is a critical factor in ensuring the survival of the rabbit population, the rabbit population maintains a positive final count across all runs, showing that they are capable of reproducing and sustaining themselves.
+
+However, due to the stochastic nature of agent-based models, we observe that in some simulation runs (6 out of 100), the fox population drops to zero. Despite this, the presence of surviving foxes in most simulations suggests the system can support predator-prey dynamics.

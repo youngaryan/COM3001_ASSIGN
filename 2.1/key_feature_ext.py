@@ -373,25 +373,28 @@ def get_agent_counts(record):
 
 
 if __name__ == "__main__":
-# Number of independent simulation runs
     N_RUNS = 100
-
+    
     # Lists to store metrics from each run
     peak_rabbits_all = []
+    min_rabbits_all = []
     final_rabbits_all = []
+    
     peak_foxes_all = []
+    min_foxes_all = []
     final_foxes_all = []
+    
     peak_grass_all = []
+    min_grass_all = []
     final_grass_all = []
 
-    # Run multiple simulations
     for run_index in range(N_RUNS):
-        # 1. Create a fresh environment and agent population for each run
+        # 1. Create a fresh environment and agent population
         env = Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)
-        
         agents = []
+        
         Nrabbits = 200
-        Nfoxes = 15
+        Nfoxes   = 15
         
         for i in range(Nrabbits):
             agents.append(Rabbit(position=env.get_random_location(), speed=1))
@@ -401,70 +404,86 @@ if __name__ == "__main__":
         # 2. Run the simulation
         record = run_ecolab(env, agents, Niterations=1000, earlystop=True)
         
-        # 3. Extract population counts from the record
+        # 3. Compute population counts
         counts = get_agent_counts(record)
-        # counts is an array of shape [T, 3], columns = [Foxes, Rabbits, Grass]
+        foxes_over_time   = counts[:, 0]  # foxes
+        rabbits_over_time = counts[:, 1]  # rabbits
+        grass_over_time   = counts[:, 2]  # grass
         
-        # Separate columns for clarity
-        foxes_over_time    = counts[:, 0]
-        rabbits_over_time  = counts[:, 1]
-        grass_over_time    = counts[:, 2]
-        
-        # 4. Compute the metrics for this run
-        peak_rabbits = np.max(rabbits_over_time)
+        # 4. Compute metrics: peak, min, final
+        peak_rabbits  = np.max(rabbits_over_time)
+        min_rabbits   = np.min(rabbits_over_time)
         final_rabbits = rabbits_over_time[-1]
         
-        peak_foxes = np.max(foxes_over_time)
+        peak_foxes  = np.max(foxes_over_time)
+        min_foxes   = np.min(foxes_over_time)
         final_foxes = foxes_over_time[-1]
         
-        peak_grass = np.max(grass_over_time)
+        peak_grass  = np.max(grass_over_time)
+        min_grass   = np.min(grass_over_time)
         final_grass = grass_over_time[-1]
         
-        # 5. Store metrics in their respective lists
+        # 5. Store them in lists
         peak_rabbits_all.append(peak_rabbits)
+        min_rabbits_all.append(min_rabbits)
         final_rabbits_all.append(final_rabbits)
+        
         peak_foxes_all.append(peak_foxes)
+        min_foxes_all.append(min_foxes)
         final_foxes_all.append(final_foxes)
+        
         peak_grass_all.append(peak_grass)
+        min_grass_all.append(min_grass)
         final_grass_all.append(final_grass)
+        print(f"Run {run_index+1}/{N_RUNS} completed.")
 
-    # Helper function to print stats
+    # Helper function
     def print_stats(name, data):
         print(f"\n--- {name} ---")
-        print(f"Mean: {np.mean(data):.2f}")
-        print(f"Std Dev: {np.std(data, ddof=1):.2f}")
-        print(f"Min: {np.min(data):.2f}")
-        print(f"Max: {np.max(data):.2f}")
+        print(f"Mean:   {np.mean(data):.2f}")
+        print(f"Std Dev:{np.std(data, ddof=1):.2f}")
+        print(f"Min:    {np.min(data):.2f}")
+        print(f"Max:    {np.max(data):.2f}")
 
     # Print out statistics for each metric
-    print_stats("Peak Rabbits", peak_rabbits_all)
+    print_stats("Peak Rabbits",  peak_rabbits_all)
+    print_stats("Min Rabbits",   min_rabbits_all)
     print_stats("Final Rabbits", final_rabbits_all)
-    print_stats("Peak Foxes", peak_foxes_all)
-    print_stats("Final Foxes", final_foxes_all)
-    print_stats("Peak Grass", peak_grass_all)
-    print_stats("Final Grass", final_grass_all)
-
     
-    plt.style.use("seaborn-v0_8-darkgrid")  # Better aesthetics
+    print_stats("Peak Foxes",  peak_foxes_all)
+    print_stats("Min Foxes",   min_foxes_all)
+    print_stats("Final Foxes", final_foxes_all)
+    
+    print_stats("Peak Grass",  peak_grass_all)
+    print_stats("Min Grass",   min_grass_all)
+    print_stats("Final Grass", final_grass_all)
+    
 
-    # 1. Put the metrics into a DataFrame for easier analysis/plotting
+    print(min_foxes_all)
+    print(final_foxes_all)
+    # -------------------------------------------------------------------------
+    # Make a DataFrame with these metrics for easy plotting or analysis
+    # -------------------------------------------------------------------------
     df = pd.DataFrame({
-        'Peak Rabbits':  peak_rabbits_all,
+        # 'Peak Rabbits':  peak_rabbits_all,
+        # 'Min Rabbits':   min_rabbits_all,
         'Final Rabbits': final_rabbits_all,
-        'Peak Foxes':    peak_foxes_all,
-        'Final Foxes':   final_foxes_all,
-        'Peak Grass':    peak_grass_all,
-        'Final Grass':   final_grass_all
+        
+        # 'Peak Foxes':  peak_foxes_all,
+        # 'Min Foxes':   min_foxes_all,
+        'Final Foxes': final_foxes_all,
+        
+        # 'Peak Grass':  peak_grass_all,
+        # 'Min Grass':   min_grass_all,
+        # 'Final Grass': final_grass_all
     })
 
-    ##############################################################################
-    # (A) Box Plot: Shows the distribution of each metric across multiple runs
-    ##############################################################################
+    # ----------------------- Box Plot of All Metrics -------------------------
     plt.figure(figsize=(10, 6))
-    box = df.boxplot(
+    df.boxplot(
         patch_artist=True,
-        boxprops=dict(facecolor='#a1c9f4', color='#1f77b4'),
-        medianprops=dict(color='darkred'),
+        boxprops=dict(facecolor='#a1c9f4', color='black'),
+        medianprops=dict(color='red'),
         whiskerprops=dict(color='black'),
         capprops=dict(color='black'),
         flierprops=dict(marker='o', color='red', alpha=0.4)
@@ -473,29 +492,21 @@ if __name__ == "__main__":
     plt.ylabel('Value', fontsize=12)
     plt.xticks(rotation=30, ha='right')
     plt.tight_layout()
-    plt.savefig('2.1/images/boxplot_metrics.png', dpi=600)  # Save the figure
+    plt.savefig('boxplot_metrics_30_sim.png', dpi=600)
     plt.show()
 
-    ##############################################################################
-    # (B) Bar Chart with Error Bars: Shows mean ± standard deviation per metric
-    ##############################################################################
-    metrics = df.columns  # ['Peak Rabbits', ..., 'Final Grass']
+    # ----------------- Bar Chart (Mean ± SD) for All Metrics ----------------
+    metrics = df.columns
     mean_vals = df.mean()
-    std_vals  = df.std(ddof=1)  # sample standard deviation
-
-    x_pos = np.arange(len(metrics))  # for bar positions
-    colors = ['#66c2a5', '#fc8d62', '#8da0cb', '#e78ac3', '#a6d854', '#ffd92f']
-
+    std_vals  = df.std(ddof=1)
+    
+    x_pos = np.arange(len(metrics))
+    
     plt.figure(figsize=(10, 6))
-    bars = plt.bar(x_pos, mean_vals, yerr=std_vals, capsize=6, color=colors, edgecolor='black', alpha=0.85)
-
-    # Add legend mapping color to metric
-    plt.legend(bars, metrics, title="Metrics", bbox_to_anchor=(1.05, 1), loc='upper left')
-
+    bars = plt.bar(x_pos, mean_vals, yerr=std_vals, capsize=4, alpha=0.8, edgecolor='black')
     plt.xticks(x_pos, metrics, rotation=30, ha='right')
     plt.title('Mean ± SD of Metrics Across Runs', fontsize=14)
     plt.ylabel('Value', fontsize=12)
     plt.tight_layout()
-    plt.savefig('2.1/images/boxplot_metrics_2.png', dpi=600)  # Save the figure
+    plt.savefig('bar_chart_metrics_30_sim.png', dpi=600)
     plt.show()
-

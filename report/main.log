@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.9)  9 APR 2025 16:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.9)  10 APR 2025 17:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -227,7 +227,7 @@ Overfull \hbox (0.80788pt too wide) in paragraph at lines 49--50
 []\OT1/cmr/bx/n/10.95 ABM: \OT1/cmr/m/n/10.95 Each eat-ing or breed-ing event is dis-crete. Foxes may or may not suc-cess-fully
  []
 
-[3]) [4] [5] (main.lof
+[3] [4]) [5] (main.lof
 Overfull \hbox (5.79155pt too wide) in paragraph at lines 7--7
  [][] []\OT1/cmr/m/n/10.95 Lorenz at-trac-tor er-ror anal-y-sis with ini-tial state $(1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 0)$, us-ing 100 dif-fer-ent 
  []
@@ -267,20 +267,24 @@ Overfull \hbox (2.89928pt too wide) in paragraph at lines 13--13
  \OT1/cmr/m/n/10.95 Rab-bits are ini-tial-ized with \OT1/cmtt/m/n/10.95 speed=1\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 vision=5\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 breedfreq=10\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 breedfood=10\OT1/cmr/m/n/10.95 , 
  []
 
+[6
+
+
+]
+Overfull \hbox (2.93237pt too wide) in paragraph at lines 14--14
+ [][] []\OT1/cmr/m/n/10.95 Descriptive statis-tics of key eco-log-i-cal vari-ables recorded across 100 in-de-pen-dent 
+ []
+
 )
 \tf@lof=\write3
 \openout3 = `main.lof'.
 
  (figures/fig.tex
-<images/phase_portraits1.1.4.png, id=31, 1300.86pt x 722.7pt>
+<images/phase_portraits1.1.4.png, id=38, 1300.86pt x 722.7pt>
 File: images/phase_portraits1.1.4.png Graphic file (type png)
 <use images/phase_portraits1.1.4.png>
 Package pdftex.def Info: images/phase_portraits1.1.4.png  used on input line 3.
 (pdftex.def)             Requested size: 440.84746pt x 244.90973pt.
- [6
-
-
-]
 <images/error_comparison1.1.4.png, id=40, 722.7pt x 433.62pt>
 File: images/error_comparison1.1.4.png Graphic file (type png)
 <use images/error_comparison1.1.4.png>
@@ -346,7 +350,17 @@ Underfull \hbox (badness 5637) in paragraph at lines 90--90
 \OT1/cmtt/m/n/10.95 Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 Nrabbits
  []
 
-) [7 <./images/phase_portraits1.1.4.png>] [8 <./images/error_comparison1.1.4.png> <./images/error_comparison_same_times.png>] [9 <./images/error_comparison1000_114.png> <./images/error_comparison_rk4_stable_0.13.png>] [10 <./images/optuna_lorenz_3d.png> <./images/two_initial_conditions_3d_separate.png>] [11 <./images/two_initial_conditions_3d_separate_2.png> <./images/two_initial_conditions_3d_separate_3.png>] [12 <./images/Ecolab_simulation.png> <./images/Ecolab_simulation_no_foxes.png>] (main.lot)
+<images/boxplot_metrics_100_sim.png, id=50, 722.7pt x 433.62pt>
+File: images/boxplot_metrics_100_sim.png Graphic file (type png)
+<use images/boxplot_metrics_100_sim.png>
+Package pdftex.def Info: images/boxplot_metrics_100_sim.png  used on input line 97.
+(pdftex.def)             Requested size: 396.76001pt x 238.05504pt.
+) [7 <./images/phase_portraits1.1.4.png>] [8 <./images/error_comparison1.1.4.png> <./images/error_comparison_same_times.png>] [9 <./images/error_comparison1000_114.png> <./images/error_comparison_rk4_stable_0.13.png>] [10 <./images/optuna_lorenz_3d.png> <./images/two_initial_conditions_3d_separate.png>] [11 <./images/two_initial_conditions_3d_separate_2.png> <./images/two_initial_conditions_3d_separate_3.png>] [12 <./images/Ecolab_simulation.png> <./images/Ecolab_simulation_no_foxes.png>] [13 <./images/boxplot_metrics_100_sim.png>] (main.lot
+Overfull \hbox (2.93237pt too wide) in paragraph at lines 5--5
+ [][] []\OT1/cmr/m/n/10.95 Descriptive statis-tics of key eco-log-i-cal vari-ables recorded across 100 in-de-pen-dent 
+ []
+
+)
 \tf@lot=\write4
 \openout4 = `main.lot'.
 
@@ -376,106 +390,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--11
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 []\OT1/cmr/bx/n/10.95 Equation-Based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
 []\OT1/cmr/m/n/10.95 Represents in-di-vid-ual
  []
 
 
-Underfull \hbox (badness 4954) in paragraph at lines 25--25
+Underfull \hbox (badness 4954) in paragraph at lines 24--24
 \OT1/cmr/m/n/10.95 or fox, cap-tur-ing their
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
 \OT1/cmr/m/n/10.95 unique be-hav-iors and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 []\OT1/cmr/m/n/10.95 Models pop-u-la-tions as
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 \OT1/cmr/m/n/10.95 con-tin-u-ous vari-ables,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 \OT1/cmr/m/n/10.95 fo-cus-ing on ag-gre-gate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 \OT1/cmr/m/n/10.95 prop-er-ties rather than
  []
 
 
-Underfull \hbox (badness 3989) in paragraph at lines 29--29
+Underfull \hbox (badness 3989) in paragraph at lines 28--28
 []\OT1/cmr/m/n/10.95 Explicitly mod-els space,
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 29--29
+Underfull \hbox (badness 1430) in paragraph at lines 28--28
 \OT1/cmr/m/n/10.95 al-low-ing agents to move
  []
 
 
-Underfull \hbox (badness 5345) in paragraph at lines 29--29
+Underfull \hbox (badness 5345) in paragraph at lines 28--28
 \OT1/cmr/m/n/10.95 and in-ter-act within an
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 []\OT1/cmr/m/n/10.95 Generally lacks spa-tial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
 \OT1/cmr/m/n/10.95 from sim-ple in-ter-ac-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--33
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
 []\OT1/cmr/m/n/10.95 Models di-verse and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
 \OT1/cmr/m/n/10.95 but com-pu-ta-tion-ally
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 []\OT1/cmr/m/n/10.95 Abstract, an-a-lyt-i-cally
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 \OT1/cmr/m/n/10.95 tractable, and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 \OT1/cmr/m/n/10.95 com-pu-ta-tion-ally less
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 35--36
+Underfull \hbox (badness 1052) in paragraph at lines 34--35
 \OT1/cmr/m/n/10.95 ex-pen-sive, but may lack
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (main.bbl [13
 
-] [14]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (main.bbl [14
+
+] [15] [16]
 main.bbl:16: Missing $ inserted.
 <inserted text> 
                 $
@@ -936,7 +953,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[15
+[17
 
 ]
 main.bbl:95: Missing $ inserted.
@@ -987,24 +1004,24 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-) [16] (main.aux)
+) [18] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2975 strings out of 474486
- 49779 string characters out of 5743756
- 1936542 words of memory out of 5000000
- 25227 multiletter control sequences out of 15000+600000
+ 2984 strings out of 474486
+ 50120 string characters out of 5743756
+ 1940542 words of memory out of 5000000
+ 25236 multiletter control sequences out of 15000+600000
  567028 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,65p,847b,287s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\aryan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (17 pages, 8048374 bytes).
+Output written on main.pdf (19 pages, 8292365 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
+ 174 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
