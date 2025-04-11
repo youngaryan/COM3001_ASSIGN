@@ -373,16 +373,21 @@ def get_agent_counts(record):
 
 
 if __name__ == "__main__":
-    N_RUNS = 30
-    growrate_values = [40, 60, 80, 100, 120, 140, 160, 180, 200]
+    N_RUNS = 100
+    growrate_values = [20, 40, 60, 80, 100, 120, 140, 160, 180, 200]
 
     extinction_probs = []  # Probability of fox extinction per growrate
     avg_final_foxes = []   # Optional: Mean final fox count per growrate
+    final_foxes_stddevs = []
+    all_final_foxes_by_growrate = []
+    all_final_rabbits_by_growrate = []
+    # all_final_rabbits = []
 
     for growrate in growrate_values:
         print(f"\nTesting growrate = {growrate}")
         fox_extinctions = 0
         final_foxes_list = []
+        final_rabbits_list = []
 
         for run_index in range(N_RUNS):
             # Setup
@@ -400,7 +405,10 @@ if __name__ == "__main__":
             record = run_ecolab(env, agents, Niterations=1000, earlystop=True)
             counts = get_agent_counts(record)
             final_foxes = counts[-1, 0]
+            final_rabbits = counts[-1, 1]
             final_foxes_list.append(final_foxes)
+            final_rabbits_list.append(final_rabbits)
+
 
             if final_foxes == 0:
                 fox_extinctions += 1
@@ -408,7 +416,13 @@ if __name__ == "__main__":
         # Compute statistics for this growrate
         extinction_prob = fox_extinctions / N_RUNS
         extinction_probs.append(extinction_prob)
+        all_final_foxes_by_growrate.append(final_foxes_list)
+        all_final_rabbits_by_growrate.append(final_rabbits_list)
+        # all_final_rabbits_by_growrate.append(final_rabbits)
         avg_final_foxes.append(np.mean(final_foxes_list))
+        final_foxes_stddevs.append(np.std(final_foxes_list))
+
+
 
         print(f"Fox extinction rate at growrate {growrate}: {extinction_prob:.2f}")
 
@@ -421,9 +435,32 @@ if __name__ == "__main__":
     plt.ylim(0, 1.05)
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('fox_extinction_vs_growrate.png', dpi=600)
-    plt.show()
+    plt.savefig('2.2/images/fox_extinction_vs_growrate.png', dpi=600)
+   #  plt.show()
 
+    flat_final_rabbits = [val for sublist in all_final_rabbits_by_growrate for val in sublist]
+    flat_final_foxes = [val for sublist in all_final_foxes_by_growrate for val in sublist]
+
+    df = pd.DataFrame({
+    'Final Rabbits': flat_final_rabbits,
+    'Final Foxes': flat_final_foxes
+})
+    plt.figure(figsize=(10, 6))
+
+    df.boxplot(
+        patch_artist=True,
+        boxprops=dict(facecolor='#a1c9f4', color='black'),
+        medianprops=dict(color='red'),
+        whiskerprops=dict(color='black'),
+        capprops=dict(color='black'),
+        flierprops=dict(marker='o', color='red', alpha=0.4)
+    )
+    plt.title('Distribution of Final Populations (All Growrates Combined)', fontsize=14)
+    plt.ylabel('Final Population', fontsize=12)
+    plt.xticks(rotation=30, ha='right')
+    plt.tight_layout()
+    plt.savefig('2.2/images/boxplot_final_metrics_all_growrates.png', dpi=600)
+    # plt.show()
 
     # -------------------- Plot: Growrate vs Avg Final Foxes ---------------------
     plt.figure(figsize=(10, 6))
@@ -433,5 +470,34 @@ if __name__ == "__main__":
     plt.ylabel('Average Final Number of Foxes')
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('avg_final_foxes_vs_growrate.png', dpi=600)
-    plt.show()
+    plt.savefig('2.2/images/avg_final_foxes_vs_growrate.png', dpi=600)
+   #  plt.show()
+
+    plt.figure(figsize=(12, 6))
+    plt.boxplot(all_final_foxes_by_growrate, patch_artist=True,
+                boxprops=dict(facecolor='lightblue'),
+                medianprops=dict(color='red'))
+    plt.boxplot(all_final_rabbits_by_growrate, patch_artist=True,
+                boxprops=dict(facecolor='lightblue'),
+                medianprops=dict(color='red'))
+    plt.xticks(ticks=range(1, len(growrate_values) + 1), labels=growrate_values)
+    plt.title('Distribution of Final Fox Populations Across Runs')
+    plt.xlabel('Grass Growrate')
+    plt.ylabel('Final Fox Population')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig('2.2/images/boxplot_final_foxes_by_growrate.png', dpi=600)
+   #  plt.show()
+
+
+    results_df = pd.DataFrame({
+    'Growrate': growrate_values,
+    'Fox Extinction Probability': extinction_probs,
+    'Average Final Foxes': avg_final_foxes,
+    'Fox Std Dev': final_foxes_stddevs
+    })
+
+    # Save to CSV
+    results_df.to_csv('2.2/data/fox_simulation_results.csv', index=False)
+    print("Results saved to 2.2/data/fox_simulation_results.csv")
+

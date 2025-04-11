@@ -371,11 +371,11 @@ def get_agent_counts(record):
 
 
 if __name__ == '__main__':
-    env = Environment(shape=[60,60],growrate=60,maxgrass=50,startgrass=1)
+    env = Environment(shape=[60,60],growrate=1600,maxgrass=50,startgrass=1)
     
     #create agents (rabbits and foxes)
     Nrabbits = 200
-    Nfoxes = 0
+    Nfoxes = 15
     agents = []
     for i in range(Nrabbits):
         r = Rabbit(position=env.get_random_location(),speed=1)
@@ -400,5 +400,5 @@ if __name__ == '__main__':
     plt.xlabel('Iteration')
     plt.ylabel('Count');
     plt.title('Ecolab simulation')
-    plt.savefig('Ecolab_simulation_no_foxes.png', dpi=300)
+    # plt.savefig('Ecolab_simulation_no_foxes.png', dpi=300)
     plt.show()

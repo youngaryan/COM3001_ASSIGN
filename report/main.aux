@@ -2,14 +2,38 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Question 1: Dynamical systems}{1}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Question 2: Prey-Predator System}{2}{}\protected@file@percent }
+\citation{1963JAtS...20..130L}
+\citation{apsLorenz2003}
+\citation{apsLorenz2003}
+\citation{kashyap2024lorenz}
+\citation{Pathak_2017}
+\citation{armaos2024quantumcomputingatmosphericdynamics}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Exercise 1: Lorenz dynamical system}{2}{}\protected@file@percent }
+\newlabel{eq:lorenz_horizontal}{{1.1}{2}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}How to use numerical methods to simulate the system, }{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Explicit Euler Method}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Fourth-Order Runge-Kutta (RK4) Method}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Time Step Analysis}{3}{}\protected@file@percent }
+\citation{youngaryanLorenzPlot1.1.4}
+\@writefile{toc}{\contentsline {subsubsection}{Simulation and Results}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Quantitative Error Analysis}{4}{}\protected@file@percent }
+\citation{akiba2019optuna}
+\citation{youngaryanOptunaCode}
+\@writefile{toc}{\contentsline {paragraph}{Theoretical Error Scaling:}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Error Metric Details:}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Exercise 2: Selecting a Numerical Method and Demonstrating Chaotic Behavior}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Selection of Numerical Method and Time Step}{5}{}\protected@file@percent }
+\newlabel{eq:composite_objective}{{1.4}{6}{}{}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Generation and Analysis of Phase Portraits}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}What Does It Mean for a System to Be Chaotic?}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Question 2: Prey-Predator System}{8}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Simulate the prey-predator model}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Differences between Agent Based Modeling vs Equation Based Modeling}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}short}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}short}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Parameter Sensitivity Analysis }{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Simulate the prey-predator model}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Differences between Agent Based Modeling vs Equation Based Modeling}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}short}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}short}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Parameter Sensitivity Analysis }{12}{}\protected@file@percent }
 \citation{youngaryanLorenzPlot1.1.4_image}
 \citation{youngaryanLorenzPlot1.1.4_image}
 \citation{youngaryanLorenzError1.1.4_image}
@@ -64,38 +88,38 @@
 \citation{youngaryantwo_initial_conditions_3d_3separateICode}
 \citation{youngaryantwo_initial_conditions_3d_separateICode}
 \citation{youngaryantwo_initial_conditions_3d_3separateICode}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Lorenz attractor with initial state (1.0,1.0,1.0) and time step (0.001, 0.01, 0.1), and total simulation time of 40 seconds, For $\Delta t > 0.01$, the solution is not stable enough to reliably reproduce the attractor shape\cite  {youngaryanLorenzPlot1.1.4_image}}}{8}{}\protected@file@percent }
-\newlabel{fig:lorenz_vis}{{2.1}{8}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Lorenz attractor error analysis with initial state (1.0,1.0,1.0) and time step (0.001, 0.01, 0.1), and total simulation time of 40 seconds, For $\Delta t > 0.01$, the solution is not stable enough to reliably reproduce the attractor shape\cite  {youngaryanLorenzPlot1.1.4_image}}}{9}{}\protected@file@percent }
-\newlabel{fig:error_comparison1.1.4}{{2.2}{9}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Lorenz attractor error analysis with initial state \((1.0, 1.0, 1.0)\), 1000 different time steps between \((0.0001 and 0.001)\), and a total simulation time of 40 seconds. this experiment is to compare the mean error of the two methods\cite  {youngaryanLorenzError1.1.4_image}.}}{9}{}\protected@file@percent }
-\newlabel{fig:error_comparison_same_times}{{2.3}{9}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Lorenz attractor error analysis with initial state \((1.0, 1.0, 1.0)\), using 1000 different time steps between \(10^{-3}\) and \(10^{-1}\), and a total simulation time of 40 seconds. For \(\Delta t > 0.025\), the Euler solution is not stable enough to reliably reproduce the attractor shape. \cite  {youngaryanLorenzError1.1.41000_image}.}}{10}{}\protected@file@percent }
-\newlabel{fig:lorenz_error1000}{{2.4}{10}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Lorenz attractor error analysis with initial state \((1.0, 1.0, 1.0)\), using 100 different time steps between \(10^{-3}\) and \(10^{1}\), and a total simulation time of 40 seconds. For \(\Delta t < 0.14\), the RK4 solution is stable enough to reproduce the attractor shape. \cite  {youngaryanerror_comparison_rk4_stable_0.13sCode}.}}{10}{}\protected@file@percent }
-\newlabel{fig:error_comparison_rk4_stable_0.13}{{2.5}{10}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparison between reference system with \(\Delta t = 0.001\) and a less computationally expensive system with step size of \(\Delta t = 0.0073\), for this I used Optuna \cite  {akiba2019optuna} with 50 trials. the code is at \cite  {youngaryanOptunaCode} and the image \cite  {youngaryanoptunaComparisonImage}.}}{11}{}\protected@file@percent }
-\newlabel{fig:optuna_lorenz_3d}{{2.6}{11}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Comparison between two similar initial conditions of (0.01, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of $\Delta t = 0.0073$ to show the chaotic behavior of the system. the code is at \cite  {youngaryantwo_initial_conditions_3d_separateICode} and the image \cite  {youngaryantwo_initial_conditions_3d_separateImg}.}}{11}{}\protected@file@percent }
-\newlabel{fig:two_initial_conditions_3d_separate}{{2.7}{11}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Comparison between two similar initial conditions of (0.0, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of $\Delta t = 0.0073$ to show the chaotic behavior of the system. the code is at \cite  {youngaryantwo_initial_conditions_3d_separateICode} and the image \cite  {youngaryantwo_initial_conditions_3d_2separateICode}.}}{12}{}\protected@file@percent }
-\newlabel{fig:two_initial_conditions_3d_separate_2}{{2.8}{12}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Comparison between two similar initial conditions of (1.0, 1.0, 1.0) and (1.0001, 1.0, 1.0) and the time steps of$\Delta t = 0.0073$ to show the chaotic behavior of the system. the code is at \cite  {youngaryantwo_initial_conditions_3d_separateICode} and the image \cite  {youngaryantwo_initial_conditions_3d_3separateICode}.}}{12}{}\protected@file@percent }
-\newlabel{fig:two_initial_conditions_3d_separate_3}{{2.9}{12}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Simulation of a prey-predator system with the following initial settings: \texttt  {Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt  {Nrabbits = 200}, \texttt  {Nfoxes = 15}. Rabbits are initialized with \texttt  {speed=1}, \texttt  {vision=5}, \texttt  {breedfreq=10}, \texttt  {breedfood=10}, and \texttt  {maxage=40}. Foxes are initialized with \texttt  {speed=3}, \texttt  {vision=7}, \texttt  {breedfreq=30}, \texttt  {breedfood=20}, and \texttt  {maxage=80}. See \cite  {youngaryantwo_initial_conditions_3d_separateICode} for code and \cite  {youngaryantwo_initial_conditions_3d_3separateICode} for the source image.}}{13}{}\protected@file@percent }
-\newlabel{fig:Ecolab_pred_prey}{{2.10}{13}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Simulation of a prey-predator system with the following initial settings: \texttt  {Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt  {Nrabbits = 200}, \texttt  {Nfoxes = 15}. Rabbits are initialized with \texttt  {speed=1}, \texttt  {vision=5}, \texttt  {breedfreq=10}, \texttt  {breedfood=10}, and \texttt  {maxage=40}. And ero foxes. See \cite  {youngaryantwo_initial_conditions_3d_separateICode} for code and \cite  {youngaryantwo_initial_conditions_3d_3separateICode} for the source image.}}{13}{}\protected@file@percent }
-\newlabel{fig:Ecolab_pred_prey_no_foxes}{{2.11}{13}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces  Descriptive statistics of key ecological variables recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run spanning up to 1000 iterations. For more information see Table ~\ref {tab:simulation_stats_2.1}. }}{14}{}\protected@file@percent }
-\newlabel{fig:boxplot_metrics_100_sim}{{2.12}{14}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Lorenz attractor with initial state (1.0,1.0,1.0) and time step (0.001, 0.01, 0.1), and total simulation time of 40 seconds, For $\Delta t > 0.01$, the solution is not stable enough to reliably reproduce the attractor shape\cite  {youngaryanLorenzPlot1.1.4_image}}}{14}{}\protected@file@percent }
+\newlabel{fig:lorenz_vis}{{2.1}{14}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Lorenz attractor error analysis with initial state (1.0,1.0,1.0) and time step (0.001, 0.01, 0.1), and total simulation time of 40 seconds, For $\Delta t > 0.01$, the solution is not stable enough to reliably reproduce the attractor shape\cite  {youngaryanLorenzPlot1.1.4_image}}}{15}{}\protected@file@percent }
+\newlabel{fig:error_comparison1.1.4}{{2.2}{15}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Lorenz attractor error analysis with initial state \((1.0, 1.0, 1.0)\), 1000 different time steps between \((0.0001 and 0.001)\), and a total simulation time of 40 seconds. this experiment is to compare the mean error of the two methods\cite  {youngaryanLorenzError1.1.4_image}.}}{15}{}\protected@file@percent }
+\newlabel{fig:error_comparison_same_times}{{2.3}{15}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Lorenz attractor error analysis with initial state \((1.0, 1.0, 1.0)\), using 1000 different time steps between \(10^{-3}\) and \(10^{-1}\), and a total simulation time of 40 seconds. For \(\Delta t > 0.025\), the Euler solution is not stable enough to reliably reproduce the attractor shape. \cite  {youngaryanLorenzError1.1.41000_image}.}}{16}{}\protected@file@percent }
+\newlabel{fig:lorenz_error1000}{{2.4}{16}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Lorenz attractor error analysis with initial state \((1.0, 1.0, 1.0)\), using 100 different time steps between \(10^{-3}\) and \(10^{1}\), and a total simulation time of 40 seconds. For \(\Delta t < 0.14\), the RK4 solution is stable enough to reproduce the attractor shape. \cite  {youngaryanerror_comparison_rk4_stable_0.13sCode}.}}{16}{}\protected@file@percent }
+\newlabel{fig:error_comparison_rk4_stable_0.13}{{2.5}{16}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparison between reference system with \(\Delta t = 0.001\) and a less computationally expensive system with step size of \(\Delta t = 0.0073\), for this I used Optuna \cite  {akiba2019optuna} with 50 trials. the code is at \cite  {youngaryanOptunaCode} and the image \cite  {youngaryanoptunaComparisonImage}.}}{17}{}\protected@file@percent }
+\newlabel{fig:optuna_lorenz_3d}{{2.6}{17}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Comparison between two similar initial conditions of (0.01, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of $\Delta t = 0.0073$ to show the chaotic behavior of the system. the code is at \cite  {youngaryantwo_initial_conditions_3d_separateICode} and the image \cite  {youngaryantwo_initial_conditions_3d_separateImg}.}}{17}{}\protected@file@percent }
+\newlabel{fig:two_initial_conditions_3d_separate}{{2.7}{17}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Comparison between two similar initial conditions of (0.0, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of $\Delta t = 0.0073$ to show the chaotic behavior of the system. the code is at \cite  {youngaryantwo_initial_conditions_3d_separateICode} and the image \cite  {youngaryantwo_initial_conditions_3d_2separateICode}.}}{18}{}\protected@file@percent }
+\newlabel{fig:two_initial_conditions_3d_separate_2}{{2.8}{18}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Comparison between two similar initial conditions of (1.0, 1.0, 1.0) and (1.0001, 1.0, 1.0) and the time steps of$\Delta t = 0.0073$ to show the chaotic behavior of the system. the code is at \cite  {youngaryantwo_initial_conditions_3d_separateICode} and the image \cite  {youngaryantwo_initial_conditions_3d_3separateICode}.}}{18}{}\protected@file@percent }
+\newlabel{fig:two_initial_conditions_3d_separate_3}{{2.9}{18}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Simulation of a prey-predator system with the following initial settings: \texttt  {Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt  {Nrabbits = 200}, \texttt  {Nfoxes = 15}. Rabbits are initialized with \texttt  {speed=1}, \texttt  {vision=5}, \texttt  {breedfreq=10}, \texttt  {breedfood=10}, and \texttt  {maxage=40}. Foxes are initialized with \texttt  {speed=3}, \texttt  {vision=7}, \texttt  {breedfreq=30}, \texttt  {breedfood=20}, and \texttt  {maxage=80}. See \cite  {youngaryantwo_initial_conditions_3d_separateICode} for code and \cite  {youngaryantwo_initial_conditions_3d_3separateICode} for the source image.}}{19}{}\protected@file@percent }
+\newlabel{fig:Ecolab_pred_prey}{{2.10}{19}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Simulation of a prey-predator system with the following initial settings: \texttt  {Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt  {Nrabbits = 200}, \texttt  {Nfoxes = 15}. Rabbits are initialized with \texttt  {speed=1}, \texttt  {vision=5}, \texttt  {breedfreq=10}, \texttt  {breedfood=10}, and \texttt  {maxage=40}. And ero foxes. See \cite  {youngaryantwo_initial_conditions_3d_separateICode} for code and \cite  {youngaryantwo_initial_conditions_3d_3separateICode} for the source image.}}{19}{}\protected@file@percent }
+\newlabel{fig:Ecolab_pred_prey_no_foxes}{{2.11}{19}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces  Descriptive statistics of key ecological variables recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run spanning up to 1000 iterations. For more information see Table ~\ref {tab:simulation_stats_2.1}. }}{20}{}\protected@file@percent }
+\newlabel{fig:boxplot_metrics_100_sim}{{2.12}{20}{}{}{}}
 \bibstyle{acm}
 \bibdata{references}
-\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Comparison of Integration Methods}}{15}{}\protected@file@percent }
-\newlabel{tab:integration_methods}{{2.1}{15}{}{}{}}
-\newlabel{tab:diff_two_models_predator_prey}{{2.3}{16}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Comparison of Agent-Based Modeling (ABM) and Equation-Based Modeling (EBM)}}{16}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces  Descriptive statistics of key ecological variables recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run spanning up to 1000 iterations. The variables include the peak, minimum, and final values for the population of rabbits and foxes, as well as the amount of grass in the environment. These metrics provide insight into the dynamics of species interactions and resource availability, helping to evaluate ecosystem sustainability and identify scenarios that may lead to population collapse or resource depletion. See Figure~\ref {fig:boxplot_metrics_100_sim} for the distribution of these metrics. }}{17}{}\protected@file@percent }
-\newlabel{tab:simulation_stats_2.1}{{2.3}{17}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Comparison of Integration Methods}}{21}{}\protected@file@percent }
+\newlabel{tab:integration_methods}{{2.1}{21}{}{}{}}
+\newlabel{tab:diff_two_models_predator_prey}{{2.3}{22}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Comparison of Agent-Based Modeling (ABM) and Equation-Based Modeling (EBM)}}{22}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces  Descriptive statistics of key ecological variables recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run spanning up to 1000 iterations. The variables include the peak, minimum, and final values for the population of rabbits and foxes, as well as the amount of grass in the environment. These metrics provide insight into the dynamics of species interactions and resource availability, helping to evaluate ecosystem sustainability and identify scenarios that may lead to population collapse or resource depletion. See Figure~\ref {fig:boxplot_metrics_100_sim} for the distribution of these metrics. }}{23}{}\protected@file@percent }
+\newlabel{tab:simulation_stats_2.1}{{2.3}{23}{}{}{}}
 \bibcite{akiba2019optuna}{1}
 \bibcite{armaos2024quantumcomputingatmosphericdynamics}{2}
 \bibcite{youngaryanerror_comparison_rk4_stable_0.13sCode}{3}
@@ -113,4 +137,4 @@
 \bibcite{1963JAtS...20..130L}{15}
 \bibcite{Pathak_2017}{16}
 \bibcite{apsLorenz2003}{17}
-\gdef \@abspage@last{20}
+\gdef \@abspage@last{26}
