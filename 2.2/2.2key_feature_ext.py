@@ -373,7 +373,7 @@ def get_agent_counts(record):
 
 
 if __name__ == "__main__":
-    N_RUNS = 100
+    N_RUNS = 2
     growrate_values = [20, 40, 60, 80, 100, 120, 140, 160, 180, 200]
 
     extinction_probs = []  # Probability of fox extinction per growrate
