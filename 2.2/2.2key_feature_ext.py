@@ -374,7 +374,8 @@ def get_agent_counts(record):
 
 if __name__ == "__main__":
     N_RUNS = 2
-    growrate_values = [20, 40, 60, 80, 100, 120, 140, 160, 180, 200]
+    # growrate_values = [20, 40, 60, 80, 100, 120, 140, 160, 180, 200]
+    growrate_values = [20, 40, 60, 80]
 
     extinction_probs = []  # Probability of fox extinction per growrate
     avg_final_foxes = []   # Optional: Mean final fox count per growrate
@@ -435,7 +436,7 @@ if __name__ == "__main__":
     plt.ylim(0, 1.05)
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('2.2/images/fox_extinction_vs_growrate.png', dpi=600)
+    plt.savefig('~/Com3001/COM3001_ASSIGN/2.2/images/fox_extinction_vs_growrate.png', dpi=600)
    #  plt.show()
 
     flat_final_rabbits = [val for sublist in all_final_rabbits_by_growrate for val in sublist]
@@ -459,7 +460,7 @@ if __name__ == "__main__":
     plt.ylabel('Final Population', fontsize=12)
     plt.xticks(rotation=30, ha='right')
     plt.tight_layout()
-    plt.savefig('2.2/images/boxplot_final_metrics_all_growrates.png', dpi=600)
+    plt.savefig('~/Com3001/COM3001_ASSIGN/2.2/images/boxplot_final_metrics_all_growrates.png', dpi=600)
     # plt.show()
 
     # -------------------- Plot: Growrate vs Avg Final Foxes ---------------------
@@ -470,7 +471,7 @@ if __name__ == "__main__":
     plt.ylabel('Average Final Number of Foxes')
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('2.2/images/avg_final_foxes_vs_growrate.png', dpi=600)
+    plt.savefig('~/Com3001/COM3001_ASSIGN/2.2/images/avg_final_foxes_vs_growrate.png', dpi=600)
    #  plt.show()
 
     plt.figure(figsize=(12, 6))
@@ -486,7 +487,7 @@ if __name__ == "__main__":
     plt.ylabel('Final Fox Population')
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('2.2/images/boxplot_final_foxes_by_growrate.png', dpi=600)
+    plt.savefig('~/Com3001/COM3001_ASSIGN/2.2/images/boxplot_final_foxes_by_growrate.png', dpi=600)
    #  plt.show()
 
 
