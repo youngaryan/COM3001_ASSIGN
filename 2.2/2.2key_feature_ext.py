@@ -499,6 +499,6 @@ if __name__ == "__main__":
     })
 
     # Save to CSV
-    results_df.to_csv('2.2/data/fox_simulation_results.csv', index=False)
+    results_df.to_csv('fox_simulation_results.csv', index=False)
     print("Results saved to 2.2/data/fox_simulation_results.csv")
 
