@@ -374,7 +374,7 @@ def get_agent_counts(record):
 
 if __name__ == "__main__":
     N_RUNS = 100
-    growrate_values = [20, 40, 60, 80, 100, 120, 140, 160, 180, 200]
+    growrate_values = [60,65,70,75 ,80,90 ,100, 140, 180, 220]
     # growrate_values = [20, 40,]
 
     extinction_probs = []  # Probability of fox extinction per growrate
@@ -474,11 +474,9 @@ if __name__ == "__main__":
     plt.savefig('avg_final_foxes_vs_growrate_1.png', dpi=600)
    #  plt.show()
 
+# -------- Fox Population Boxplot --------
     plt.figure(figsize=(12, 6))
     plt.boxplot(all_final_foxes_by_growrate, patch_artist=True,
-                boxprops=dict(facecolor='lightblue'),
-                medianprops=dict(color='red'))
-    plt.boxplot(all_final_rabbits_by_growrate, patch_artist=True,
                 boxprops=dict(facecolor='lightblue'),
                 medianprops=dict(color='red'))
     plt.xticks(ticks=range(1, len(growrate_values) + 1), labels=growrate_values)
@@ -488,6 +486,21 @@ if __name__ == "__main__":
     plt.grid(True)
     plt.tight_layout()
     plt.savefig('boxplot_final_foxes_by_growrate_1.png', dpi=600)
+    plt.close()
+
+    # -------- Rabbit Population Boxplot --------
+    plt.figure(figsize=(12, 6))
+    plt.boxplot(all_final_rabbits_by_growrate, patch_artist=True,
+                boxprops=dict(facecolor='lightgreen'),
+                medianprops=dict(color='blue'))
+    plt.xticks(ticks=range(1, len(growrate_values) + 1), labels=growrate_values)
+    plt.title('Distribution of Final Rabbit Populations Across Runs')
+    plt.xlabel('Grass Growrate')
+    plt.ylabel('Final Rabbit Population')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig('boxplot_final_rabbits_by_growrate_1.png', dpi=600)
+    plt.close()
    #  plt.show()
 
 
