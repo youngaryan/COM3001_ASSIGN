@@ -10,13 +10,15 @@
 % \usepackage{float}
 
 
-\documentclass[11pt,oneside]{book}
-\usepackage[margin=1.2in]{geometry}
+\documentclass[6pt]{article}
+\usepackage[margin=1.0in]{geometry}
 \usepackage{setspace}
 \usepackage[toc,page]{appendix}
 \usepackage{amsmath}
 \usepackage[none]{hyphenat} % turn hyphenation off by default
 \usepackage{graphicx}
+\usepackage[toc,page]{appendix}
+
 % \usepackage{tabularx}
 
 
@@ -30,27 +32,37 @@ Sheffield, England \\
 
 \begin{document}
 
-\maketitle
-\newpage
-\mainmatter
-\chapter{Question 1: Dynamical systems}
-\newpage
+
+\section{Question 1: Dynamical systems}
+
 \input{sections/q1_ex1_lorenz.tex}
 \input{sections/q1_ex2_simulation.tex}
-\chapter{Question 2: Prey-Predator System}
-\newpage
+\section{Question 2: Prey-Predator System}
 \input{sections/q2_ex1.tex}
 \input{sections/q2_ex2_parameter_sensitivity_analysis.tex}
 
 
-\clearpage
+
+
+
+
+\newpage
+\appendix
+
+\input{appendices/formulas.tex}
+
+
+\section{images}
 \listoffigures
 \input{figures/fig}
+
+
+\section{Tables}
 \listoftables
 \input{figures/table}
 
+\section{References}
 \bibliographystyle{acm} 
 \bibliography{references} 
 % \printbibliography
-
 \end{document}

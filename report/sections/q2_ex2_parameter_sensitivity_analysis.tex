@@ -1,4 +1,4 @@
-\section{Parameter Sensitivity Analysis }
+\subsection{Parameter Sensitivity Analysis }
 
 In the previous exercise, we observed that the fox population went extinct in 6 out of 100 simulation runs. In this section, I aim to identify the conditions under which the fox population can be sustained more consistently. To do this, I selected a key parameter to vary and recorded the system's behavior in response.
 
@@ -7,4 +7,12 @@ My first assumption is that a higher growth rate will result in a more stable ec
 
 if my first assumption is correct, I expect to see a higher mean in the population of the foxes however a similar standard deviation (A low standard deviation would indicate a a stable environment). However if my second assumption is correct, I expect to see a higher mean and higher standard deviation in the population of the foxes, indicating that they are grow initially in population due to abundance of the preys but due to overhunting, the foxes of the population will be at the risk of extinction.
 
-I experimented with the following values of the growrate parameter: 60, 65, 70, 75, 80, 90, 100, 140, 180, and 220 to see their affects on the probability of foxes extinction and the average final population of the foxes. i ran 100 simulations for each values and 1000 iterations for each simulation. the results are shown the Figures  
+I experimented with the following values of the growrate parameter: 60, 65, 70, 75, 80, 90, 100, 140, 180, and 220 to
+ see their affects on the probability of foxes extinction and the average final population of the foxes. i ran 100
+  simulations for each values and 1000 iterations for each simulation.
+   For the summary statistics, see Table~\ref{tab:simulation_stats_2.1}. 
+   The results are also shown in the Figures \ref{fig:avg_final_foxes_vs_growrate_100_2.1}, \ref{fig:fox_extinction_vs_growrate_100_2.1},
+   \ref{fig:boxplot_final_foxes_by_growrate_100_2.1}, and \ref{fig:boxplot_final_rabbits_by_growrate_100_2.1}.
+
+   The results of the experiment show that my second assumption was correct. As the growth rate increases, the Fox Extinction Probability also increases. For example, with a growth rate of 70, the extinction probability for foxes is 0.04, whereas with a growth rate of 220, it rises to 0.63.
+   The average final fox population also increases; however, the standard deviation rises significantly as the growth rate increases. This indicates that while foxes are growing in number due to the abundance of prey, overhunting puts the population of both rabbits and foxes at risk of extinction.

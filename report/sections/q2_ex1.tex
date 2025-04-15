@@ -1,4 +1,4 @@
-\section{Simulate the prey-predator model}
+\subsection{Simulate the prey-predator model}
 
 The result of the prey-predator simulation can be found at Figures (\ref{fig:Ecolab_pred_prey}, \ref{fig:Ecolab_pred_prey_no_foxes}), here is a description of the simulation:
 
@@ -15,24 +15,9 @@ In the simulation, we can see an oscillatory behavior of the populations, which 
 The intreating findings I can see from this simulation is even though the agent based model includes randomized movement and local interactions, the overall population still exhibits an oscillatory up and down cycles, similar to what we see in standard predator prey models (Lotka Volterra curves which mentioned in the lectures).
 
 
-\section{Differences between Agent Based Modeling vs Equation Based Modeling}
+\subsubsection{Differences between Agent Based Modeling vs Equation Based Modeling}
 
-In a classical equation based (ODE) predator prey model, such as Lotka Volterra equations:
-\[
-\left\{
-\begin{aligned}
-\frac{dx}{dt} &= x(\alpha - \beta y) \\
-\frac{dy}{dt} &= y(\delta x - \gamma)
-\end{aligned}
-\right.
-\qquad
-\begin{aligned}
-\alpha &> 0, \quad \text{Reproduction prey} \\
-\beta &> 0, \quad \text{Predation} \\
-\gamma &> 0, \quad \text{Extinction predator} \\
-\delta &> 0, \quad \text{Reproduction predator}
-\end{aligned}
-\]
+In a classical equation based (ODE) predator prey model, such as Lotka Volterra equations, the dynamics of the populations are described by a set of ordinary differential equations (ODEs) that represent the average behavior of the populations over time. Its equations can be seen in the appendices \ref{eq:predator_prey}.
 
 populations are treated as continuous, homogeneous averages. By contrast, agent based models (ABMs) track individual rabbits and foxes.
 I have summarized the key differences between these two models in the following (see this table \ref{tab:diff_two_models_predator_prey}):
@@ -69,7 +54,7 @@ I have summarized the key differences between these two models in the following 
     \end{itemize}
 \end{itemize}
 
-\subsection[short]{Why Do Results Differ Across Runs?}
+\subsubsection[short]{Why Do Results Differ Across Runs?}
 
 \begin{itemize}
     \item \textbf{Random Initial Conditions}
@@ -87,7 +72,7 @@ I have summarized the key differences between these two models in the following 
 
 \end{itemize}
 
-\subsection[short]{Simulating the ABM Model to Monitor the Change of Key Variables}
+\subsubsection[short]{Simulating the ABM Model to Monitor the Change of Key Variables}
 Here I have considered the following key variables, recorded across 100 simulation runs of the ABM. This information helps us evaluate the sustainability of an environment by revealing population dynamics and resource availability over time. Analyzing these trends can support better ecological understanding and inform strategies to prevent long-term or permanent environmental damage (please see Table~\ref{tab:simulation_stats_2.1} for the summary statistics of these variables and Figure~\ref{fig:boxplot_metrics_100_sim} for their distributions).
 
 \begin{itemize}

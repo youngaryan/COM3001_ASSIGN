@@ -1,5 +1,0 @@
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Comparison of Integration Methods}}{22}{}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Comparison of Agent-Based Modeling (ABM) and Equation-Based Modeling (EBM)}}{23}{}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Descriptive statistics of key ecological variables recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run spanning up to 1000 iterations. The variables include the peak, minimum, and final values for the population of rabbits and foxes, as well as the amount of grass in the environment. These metrics provide insight into the dynamics of species interactions and resource availability, helping to evaluate ecosystem sustainability and identify scenarios that may lead to population collapse or resource depletion. See Figures \ref {fig:avg_final_foxes_vs_growrate_100_2.1}, \ref {fig:fox_extinction_vs_growrate_100_2.1}, \ref {fig:boxplot_final_foxes_by_growrate_100_2.1}, and \ref {fig:boxplot_final_rabbits_by_growrate_100_2.1} for the distribution of these metrics. }}{24}{}%

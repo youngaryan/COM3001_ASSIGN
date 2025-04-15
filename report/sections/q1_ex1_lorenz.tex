@@ -1,36 +1,14 @@
 
 
-\section{Exercise 1: Lorenz dynamical system}
+\subsection{Exercise 1: Lorenz dynamical system}
 
-The Lorenz system is a set of three coupled, nonlinear differential equations \cite{1963JAtS...20..130L}, which was introduced by Edward Lorenz in 1963 as a simplified model for atmospheric convection. Originally it was derived to study weather prediction and its formulation is:
-
-% \[
-% \frac{dx}{dt} = \sigma(y - x), \quad 
-% \frac{dy}{dt} = x(\rho - z) - y, \quad 
-% \frac{dz}{dt} = xy - \beta z
-% \]
-
-% With standard parameters \( \sigma = 10 \), \( \rho = 28 \), and \( \beta = \frac{8}{3} \),
-% \documentclass{article}
-% \usepackage{amsmath} % Needed for the aligned environment
-
-
-\begin{equation}\label{eq:lorenz_horizontal}
-\frac{dx}{dt} = \sigma(y - x), \quad
-\frac{dy}{dt} = x(\rho - z) - y, \quad
-\frac{dz}{dt} = xy - \beta z
-\end{equation}
-
-% \end{equation}
-% \noindent where $\sigma = 10$, $\rho = 28$, and $\beta = \frac{8}{3}$.
-
-\begin{center}
-where $\sigma = 10$, $\rho = 28$, and $\beta = \frac{8}{3}$.
-\end{center}
+The Lorenz system is a set of three coupled, nonlinear differential equations \cite{1963JAtS...20..130L},
+ which was introduced by Edward Lorenz in 1963 as a simplified model for atmospheric convection.
+  Originally it was derived to study weather prediction and its formula can be found at appendix \ref{eq:lorenz}:
 
 It revealed that even deterministic systems can exhibit unpredictable and chaotic behavior. Lorenz's discovery of the sensitive dependence on initial conditions is now known as the "butterfly effect" \cite{apsLorenz2003}: a concept that demonstrates how small changes in the initial state of a system can lead to drastically divergent trajectories over time, and it has transformed the understanding of dynamical systems by showing that small differences in starting states can lead to dramatically divergent results over time.
 
-Historically, the Lorenz system marked a paradigm shift. Before Lorenz’s work, many scientists assumed that small changes in initial conditions would only lead to small variations in future behavior. However, Lorenz showed that the weather, which was considered a definitive example of predictable physical systems, could be inherently unpredictable. This insight laid the foundation for modern chaos theory and encouraged extensive research into nonlinear dynamics \cite{apsLorenz2003}.
+Historically, the Lorenz system marked a paradigm shift. Before Lorenz's work, many scientists assumed that small changes in initial conditions would only lead to small variations in future behavior. However, Lorenz showed that the weather, which was considered a definitive example of predictable physical systems, could be inherently unpredictable. This insight laid the foundation for modern chaos theory and encouraged extensive research into nonlinear dynamics \cite{apsLorenz2003}.
 
 Beyond its initial role in meteorology, the Lorenz system has found widespread application in various fields. Its conceptual framework has influenced research in fluid dynamics, laser physics, electrical circuits, and even models of population dynamics \cite{kashyap2024lorenz}. In many of these areas, the Lorenz equations serve as a benchmark for studying chaotic attractors, strange attractors, and fractal dimensions, concepts that have proven essential in describing complex and real-world phenomena. The model’s ability to capture the essence of chaotic behavior makes it invaluable not only as a theoretical tool but also as a practical one for understanding and predicting complex systems.
 
@@ -38,62 +16,21 @@ In recent years, the relevance of the Lorenz system has grown further with advan
 
 Overall, the Lorenz system remains very important in the study of nonlinear dynamical systems. Its historical impact has been reshaping our understanding of predictability and determinism, and it continues to influence modern scientific research. As contemporary studies extend its applications into new fields, the Lorenz model exemplifies how a deceptively simple set of equations can encapsulate the profound behavior of nature, making it directly relevant to a wide array of exercises and research endeavors in mathematical modeling.
 
-\subsection{How to use numerical methods to simulate the system, }
-As shown in the Lorenz Equation~\ref{eq:lorenz_horizontal}, Because of the system’s nonlinearity and sensitivity to initial conditions (the “butterfly effect”), an analytical solution is not feasible. Instead, we can use numerical integration. In this section, I present two methods, alongside an analysis of time step effects and the simulation results:
-% \begin{enumerate}
-%     \item The Explicit Euler Method
-%     \item The Fourth-Order Runge-Kutta (RK4) Method
-% \end{enumerate}
+\subsubsection{How to use numerical methods to simulate the system, }
+As shown in the Lorenz Equation \ref{eq:lorenz}, Because of the system's nonlinearity and sensitivity to initial conditions (the "butterfly effect"), an analytical solution is not feasible. Instead, we can use numerical integration. In this section, I present two methods, alongside an analysis of time step effects and the simulation results:
+
 
 \subsubsection{The Explicit Euler Method}
 
-The Euler method is a first order numerical scheme. For a general differential equation 
-\[
-\frac{dx}{dt} = f(x),
-\]
-the Euler update rule is for Lorenz System is:
+The Euler method is a first order numerical scheme. For a general differential equation, the formula can be found in the appendix \ref{eq:euler_lorenz}.
 
-\begin{equation}
-x_{n+1} = x_n + \Delta t\, \sigma (y_n - x_n), \quad
-y_{n+1} = y_n + \Delta t\, [x_n(\rho - z_n) - y_n], \quad
-z_{n+1} = z_n + \Delta t\, [x_n y_n - \beta z_n]
-\end{equation}
-
-\begin{center}
-where $\Delta t$ is the time step.
-\end{center}
-
-
-Although this formula is straightforward, the Euler method is only first order accurate; and its error is proportional to $\Delta t$. For the Lorenz system \ref{eq:lorenz_horizontal}, this may lead to significant inaccuracies when using larger time steps, especially due to the chaotic nature of the system.
+Although this formula is straightforward, the Euler method is only first order accurate; and its error is proportional to $\Delta t$. For the Lorenz system \ref{eq:lorenz}, this may lead to significant inaccuracies when using larger time steps, especially due to the chaotic nature of the system.
 
 \subsubsection{The Fourth-Order Runge-Kutta (RK4) Method}
 
-RK4 is a more accurate method that uses intermediate calculations to achieve fourth-order accuracy. The RK4 update rule for the Lorenz system is given by:
-
-\begin{equation}
-\begin{aligned}
-k_1 &= f(x_n, y_n, z_n), \\
-k_2 &= f\left(x_n + \tfrac{1}{2} \Delta t\, k_{1,x},\; y_n + \tfrac{1}{2} \Delta t\, k_{1,y},\; z_n + \tfrac{1}{2} \Delta t\, k_{1,z} \right), \\
-k_3 &= f\left(x_n + \tfrac{1}{2} \Delta t\, k_{2,x},\; y_n + \tfrac{1}{2} \Delta t\, k_{2,y},\; z_n + \tfrac{1}{2} \Delta t\, k_{2,z} \right), \\
-k_4 &= f\left(x_n + \Delta t\, k_{3,x},\; y_n + \Delta t\, k_{3,y},\; z_n + \Delta t\, k_{3,z} \right), \\
-x_{n+1} &= x_n + \frac{\Delta t}{6} \left( k_{1,x} + 2k_{2,x} + 2k_{3,x} + k_{4,x} \right), \\
-y_{n+1} &= y_n + \frac{\Delta t}{6} \left( k_{1,y} + 2k_{2,y} + 2k_{3,y} + k_{4,y} \right), \\
-z_{n+1} &= z_n + \frac{\Delta t}{6} \left( k_{1,z} + 2k_{2,z} + 2k_{3,z} + k_{4,z} \right)
-\end{aligned}
-\end{equation}
-
-
-% \begin{equation}
-% \begin{aligned}
-% x_{n+1} = x_n + \frac{\Delta t}{6} \left( k_{1,x} + 2k_{2,x} + 2k_{3,x} + k_{4,x} \right), \quad
-% y_{n+1} = y_n + \frac{\Delta t}{6} \left( k_{1,y} + 2k_{2,y} + 2k_{3,y} + k_{4,y} \right), \quad
-% z_{n+1} = z_n + \frac{\Delta t}{6} \left( k_{1,z} + 2k_{2,z} + 2k_{3,z} + k_{4,z} \right)
-% \end{aligned}
-% \end{equation}
-
-
-
-Because of its higher accuracy, RK4 is better suited for systems like the Lorenz, where small errors can lead to significant divergence.
+RK4 is a more accurate method that uses intermediate calculations to achieve fourth-order accuracy. The RK4 update rule for the Lorenz system is given by the formula in the appendix \ref{eq:rk4_lorenz}. This method is more computationally intensive than Euler's method, but it provides a much better approximation of the true solution, especially for larger time steps.
+The RK4 method is particularly effective for systems like the Lorenz equations, where the dynamics can change rapidly. By using multiple intermediate steps to calculate the slope, RK4 captures the curvature of the solution trajectory more accurately than Euler's method, which only uses the slope at the beginning of the interval. This results in a more stable and accurate approximation of the system's behavior over time.
+The RK4 method is widely used in various fields, including physics, engineering, and finance, where accurate numerical solutions to differential equations are required. Its ability to handle stiff equations and chaotic systems makes it a valuable tool for researchers and practitioners alike.
 
 \subsubsection{Time Step Analysis}
 
@@ -121,16 +58,7 @@ In figure \ref{fig:error_comparison1.1.4} shows that the Euler method is conditi
 
 \subsubsection{Quantitative Error Analysis}
 
-To assess the performance of the numerical methods, we compare the computed trajectories to a high-accuracy reference solution obtained with the RK4 method at a very small time step (\(\Delta t = 0.001\)). In this context, the accuracy of a method is quantified by the \emph{average Euclidean error}, defined as:
-
-\[
-\text{Error} = \frac{1}{N} \sum_{i=1}^{N} 
-\bigl\| \mathbf{X}_i^{\text{method}} - \mathbf{X}_i^{\text{ref}} \bigr\|,
-\]
-%
-where \(\mathbf{X}_i = (x_i, y_i, z_i)\) represents the state vector at the \(i\)th time step, \(\mathbf{X}_i^{\text{method}}\) is the solution produced by the numerical method being tested, and \(\mathbf{X}_i^{\text{ref}}\) is the corresponding state from the reference trajectory.
-
-
+To assess the performance of the numerical methods, we compare the computed trajectories to a high-accuracy reference solution obtained with the RK4 method at a very small time step (\(\Delta t = 0.001\)). In this context, the accuracy of a method is quantified by the \emph{average Euclidean error}, as defined in the appendix \ref{eq:error_metric}.
 
 
 \paragraph{Theoretical Error Scaling:}
