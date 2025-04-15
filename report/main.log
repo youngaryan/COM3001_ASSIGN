@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.9)  15 APR 2025 17:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.9)  15 APR 2025 17:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -147,20 +147,20 @@ LaTeX Warning: Unused global option(s):
 (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -170,15 +170,15 @@ LaTeX Font Info:    ... okay on input line 33.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* h-part:(L,W,R)=(65.04256pt, 484.20988pt, 65.04256pt)
+* v-part:(T,H,B)=(65.04256pt, 664.88487pt, 65.04256pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
+* \textwidth=484.20988pt
+* \textheight=664.88487pt
+* \oddsidemargin=-7.22743pt
+* \evensidemargin=-7.22743pt
+* \topmargin=-44.22743pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -217,6 +217,11 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 )) (sections/q1_ex1_lorenz.tex [1
 
 {C:/Users/aryan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Overfull \hbox (39.79106pt too wide) in paragraph at lines 43--44
+\OT1/cmr/m/n/10 While fixed time step meth-ods such as Eu-ler and RK4 are use-full, adap-tive in-te-gra-tion meth-ods like Runge-Kutta-Fehlberg
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
@@ -226,42 +231,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-
-Overfull \hbox (0.71793pt too wide) in paragraph at lines 61--62
-\OT1/cmr/m/n/10 To as-sess the per-for-mance of the nu-mer-i-cal meth-ods, we com-pare the com-puted tra-jec-to-ries to a high-accuracy
- []
-
 [2]
 
 LaTeX Warning: Reference `fig:lorenz_error' on page 3 undefined on input line 72.
 
 ) (sections/q1_ex2_simulation.tex
-Overfull \hbox (18.63484pt too wide) in paragraph at lines 10--11
-\OT1/cmr/m/n/10 em-ployed a hy-per-pa-ram-e-ter op-ti-miza-tion ap-proach us-ing the Op-tuna li-brary [[]] (see also my im-ple-men-ta-tion
+Overfull \hbox (9.56517pt too wide) in paragraph at lines 1--1
+[]\OT1/cmr/bx/n/12 Exercise 2: Se-lect-ing a Nu-mer-i-cal Method and Demon-strat-ing Chaotic Be-hav-ior 
  []
 
-[3]) (sections/q2_ex1.tex [4]
+) [3] (sections/q2_ex1.tex [4]
 
 LaTeX Warning: Reference `fig:boxplot_metrics_100_sim' on page 5 undefined on input line 76.
 
-[5]) (sections/q2_ex2_parameter_sensitivity_analysis.tex [6]) [7] (appendices/formulas.tex) (main.lof [8]
-Overfull \hbox (1.24576pt too wide) in paragraph at lines 3--3
- [][] []\OT1/cmr/m/n/10 Lorenz at-trac-tor er-ror anal-y-sis with ini-tial state $(1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 0)$, 1000 dif-fer-ent time steps be-tween 
+[5]) (sections/q2_ex2_parameter_sensitivity_analysis.tex) [6] (appendices/formulas.tex
+Overfull \hbox (17.34657pt too wide) in paragraph at lines 66--68
+\OT1/cmr/m/n/10 This for-mu-la-tion en-cour-ages the op-ti-mizer to se-lect a time step that bal-ances sim-u-la-tion ac-cu-racy with com-pu-ta-tional
  []
 
+) (main.lof
+Overfull \hbox (2.29117pt too wide) in paragraph at lines 1--1
+ [][] []\OT1/cmr/m/n/10 Lorenz at-trac-tor with ini-tial state (1.0,1.0,1.0) and time step (0.001, 0.01, 0.1), and to-tal sim-u-la-tion 
+ []
 
-Overfull \hbox (37.77231pt too wide) in paragraph at lines 10--10
+[7]
+Overfull \hbox (23.31744pt too wide) in paragraph at lines 10--10
  [][] []\OT1/cmr/m/n/10 Simulation of a prey-predator sys-tem with the fol-low-ing ini-tial set-tings: \OT1/cmtt/m/n/10 Environment(shape=[60,60], 
  []
 
 
-Overfull \hbox (37.77231pt too wide) in paragraph at lines 11--11
+Overfull \hbox (27.25049pt too wide) in paragraph at lines 10--10
+ \OT1/cmtt/m/n/10 growrate=60, maxgrass=50, startgrass=1)\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 Nrabbits = 200\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 Nfoxes = 15\OT1/cmr/m/n/10 . Rab-bits are ini-tial-ized 
+ []
+
+
+Overfull \hbox (23.31744pt too wide) in paragraph at lines 11--11
  [][] []\OT1/cmr/m/n/10 Simulation of a prey-predator sys-tem with the fol-low-ing ini-tial set-tings: \OT1/cmtt/m/n/10 Environment(shape=[60,60], 
  []
 
 
-Overfull \hbox (3.63472pt too wide) in paragraph at lines 15--15
- [][] []\OT1/cmr/m/n/10 Fox ex-tinc-tion vs growrate, recorded across 100 in-de-pen-dent sim-u-la-tion runs of the Agent-Based 
+Overfull \hbox (27.25049pt too wide) in paragraph at lines 11--11
+ \OT1/cmtt/m/n/10 growrate=60, maxgrass=50, startgrass=1)\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 Nrabbits = 200\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 Nfoxes = 15\OT1/cmr/m/n/10 . Rab-bits are ini-tial-ized 
+ []
+
+
+Overfull \hbox (7.73541pt too wide) in paragraph at lines 12--12
+ [][] []\OT1/cmr/m/n/10 Average fi-nal foxes vs growrate, recorded across 100 in-de-pen-dent sim-u-la-tion runs of the Agent-Based 
  []
 
 )
@@ -269,92 +284,102 @@ Overfull \hbox (3.63472pt too wide) in paragraph at lines 15--15
 \openout3 = `main.lof'.
 
  (figures/fig.tex
-<images/phase_portraits1.1.4.png, id=38, 1300.86pt x 722.7pt>
+<images/phase_portraits1.1.4.png, id=35, 1300.86pt x 722.7pt>
 File: images/phase_portraits1.1.4.png Graphic file (type png)
 <use images/phase_portraits1.1.4.png>
 Package pdftex.def Info: images/phase_portraits1.1.4.png  used on input line 3.
-(pdftex.def)             Requested size: 469.75502pt x 260.9768pt.
-<images/error_comparison1.1.4.png, id=40, 722.7pt x 433.62pt>
+(pdftex.def)             Requested size: 484.20988pt x 269.00482pt.
+<images/error_comparison1.1.4.png, id=37, 722.7pt x 433.62pt>
 File: images/error_comparison1.1.4.png Graphic file (type png)
 <use images/error_comparison1.1.4.png>
 Package pdftex.def Info: images/error_comparison1.1.4.png  used on input line 11.
-(pdftex.def)             Requested size: 469.75502pt x 281.85628pt.
-<images/error_comparison_same_times.png, id=41, 722.7pt x 433.62pt>
+(pdftex.def)             Requested size: 484.20988pt x 290.5239pt.
+<images/error_comparison_same_times.png, id=38, 722.7pt x 433.62pt>
 File: images/error_comparison_same_times.png Graphic file (type png)
 <use images/error_comparison_same_times.png>
 Package pdftex.def Info: images/error_comparison_same_times.png  used on input line 18.
-(pdftex.def)             Requested size: 422.77664pt x 253.66338pt.
-<images/error_comparison1000_114.png, id=42, 722.7pt x 433.62pt>
+(pdftex.def)             Requested size: 435.78593pt x 261.47084pt.
+<images/error_comparison1000_114.png, id=39, 722.7pt x 433.62pt>
 File: images/error_comparison1000_114.png Graphic file (type png)
 <use images/error_comparison1000_114.png>
 Package pdftex.def Info: images/error_comparison1000_114.png  used on input line 29.
-(pdftex.def)             Requested size: 422.77664pt x 253.66338pt.
-<images/error_comparison_rk4_stable_0.13.png, id=43, 722.7pt x 433.62pt>
+(pdftex.def)             Requested size: 435.78593pt x 261.47084pt.
+<images/error_comparison_rk4_stable_0.13.png, id=40, 722.7pt x 433.62pt>
 File: images/error_comparison_rk4_stable_0.13.png Graphic file (type png)
 <use images/error_comparison_rk4_stable_0.13.png>
 Package pdftex.def Info: images/error_comparison_rk4_stable_0.13.png  used on input line 39.
-(pdftex.def)             Requested size: 422.77664pt x 253.66338pt.
-<images/optuna_lorenz_3d.png, id=44, 867.24pt x 433.62pt>
+(pdftex.def)             Requested size: 435.78593pt x 261.47084pt.
+<images/optuna_lorenz_3d.png, id=41, 867.24pt x 433.62pt>
 File: images/optuna_lorenz_3d.png Graphic file (type png)
 <use images/optuna_lorenz_3d.png>
 Package pdftex.def Info: images/optuna_lorenz_3d.png  used on input line 46.
-(pdftex.def)             Requested size: 422.77664pt x 211.39055pt.
-<images/two_initial_conditions_3d_separate.png, id=45, 1011.78pt x 433.62pt>
+(pdftex.def)             Requested size: 435.78593pt x 217.89458pt.
+<images/two_initial_conditions_3d_separate.png, id=42, 1011.78pt x 433.62pt>
 File: images/two_initial_conditions_3d_separate.png Graphic file (type png)
 <use images/two_initial_conditions_3d_separate.png>
 Package pdftex.def Info: images/two_initial_conditions_3d_separate.png  used on input line 54.
-(pdftex.def)             Requested size: 422.77664pt x 181.19284pt.
-<images/two_initial_conditions_3d_separate_2.png, id=46, 1011.78pt x 433.62pt>
+(pdftex.def)             Requested size: 435.78593pt x 186.76393pt.
+<images/two_initial_conditions_3d_separate_2.png, id=43, 1011.78pt x 433.62pt>
 File: images/two_initial_conditions_3d_separate_2.png Graphic file (type png)
 <use images/two_initial_conditions_3d_separate_2.png>
 Package pdftex.def Info: images/two_initial_conditions_3d_separate_2.png  used on input line 63.
-(pdftex.def)             Requested size: 422.77664pt x 181.19284pt.
-<images/two_initial_conditions_3d_separate_3.png, id=47, 1011.78pt x 433.62pt>
+(pdftex.def)             Requested size: 435.78593pt x 186.76393pt.
+<images/two_initial_conditions_3d_separate_3.png, id=44, 1011.78pt x 433.62pt>
 File: images/two_initial_conditions_3d_separate_3.png Graphic file (type png)
 <use images/two_initial_conditions_3d_separate_3.png>
 Package pdftex.def Info: images/two_initial_conditions_3d_separate_3.png  used on input line 71.
-(pdftex.def)             Requested size: 422.77664pt x 181.19284pt.
-<images/Ecolab_simulation.png, id=48, 1734.48pt x 433.62pt>
+(pdftex.def)             Requested size: 435.78593pt x 186.76393pt.
+<images/Ecolab_simulation.png, id=45, 1734.48pt x 433.62pt>
 File: images/Ecolab_simulation.png Graphic file (type png)
 <use images/Ecolab_simulation.png>
 Package pdftex.def Info: images/Ecolab_simulation.png  used on input line 81.
-(pdftex.def)             Requested size: 422.77664pt x 105.69196pt.
+(pdftex.def)             Requested size: 435.78593pt x 108.94066pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 82--82
 []\OT1/cmr/m/n/10 Figure 10: Sim-u-la-tion of a prey-predator sys-tem with the fol-low-ing ini-tial set-tings:
  []
 
-<images/Ecolab_simulation_no_foxes.png, id=49, 1734.48pt x 433.62pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\OT1/cmtt/m/n/10 Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 Nrabbits = 200\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 Nfoxes
+ []
+
+<images/Ecolab_simulation_no_foxes.png, id=46, 1734.48pt x 433.62pt>
 File: images/Ecolab_simulation_no_foxes.png Graphic file (type png)
 <use images/Ecolab_simulation_no_foxes.png>
 Package pdftex.def Info: images/Ecolab_simulation_no_foxes.png  used on input line 89.
-(pdftex.def)             Requested size: 422.77664pt x 105.69196pt.
+(pdftex.def)             Requested size: 435.78593pt x 108.94066pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 90--90
 []\OT1/cmr/m/n/10 Figure 11: Sim-u-la-tion of a prey-predator sys-tem with the fol-low-ing ini-tial set-tings:
  []
 
-<images/avg_final_foxes_vs_growrate_100.png, id=50, 722.7pt x 433.62pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\OT1/cmtt/m/n/10 Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 Nrabbits = 200\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 Nfoxes
+ []
+
+<images/avg_final_foxes_vs_growrate_100.png, id=47, 722.7pt x 433.62pt>
 File: images/avg_final_foxes_vs_growrate_100.png Graphic file (type png)
 <use images/avg_final_foxes_vs_growrate_100.png>
 Package pdftex.def Info: images/avg_final_foxes_vs_growrate_100.png  used on input line 97.
-(pdftex.def)             Requested size: 422.77664pt x 253.66338pt.
-<images/boxplot_final_foxes_by_growrate_100.png, id=51, 867.24pt x 433.62pt>
+(pdftex.def)             Requested size: 435.78593pt x 261.47084pt.
+<images/boxplot_final_foxes_by_growrate_100.png, id=48, 867.24pt x 433.62pt>
 File: images/boxplot_final_foxes_by_growrate_100.png Graphic file (type png)
 <use images/boxplot_final_foxes_by_growrate_100.png>
 Package pdftex.def Info: images/boxplot_final_foxes_by_growrate_100.png  used on input line 108.
-(pdftex.def)             Requested size: 422.77664pt x 211.39055pt.
-<images/boxplot_final_rabbits_by_growrate_100.png, id=52, 867.24pt x 433.62pt>
+(pdftex.def)             Requested size: 435.78593pt x 217.89458pt.
+<images/boxplot_final_rabbits_by_growrate_100.png, id=49, 867.24pt x 433.62pt>
 File: images/boxplot_final_rabbits_by_growrate_100.png Graphic file (type png)
 <use images/boxplot_final_rabbits_by_growrate_100.png>
 Package pdftex.def Info: images/boxplot_final_rabbits_by_growrate_100.png  used on input line 129.
-(pdftex.def)             Requested size: 422.77664pt x 211.39055pt.
-<images/fox_extinction_vs_growrate_100.png, id=53, 722.7pt x 433.62pt>
+(pdftex.def)             Requested size: 435.78593pt x 217.89458pt.
+<images/fox_extinction_vs_growrate_100.png, id=50, 722.7pt x 433.62pt>
 File: images/fox_extinction_vs_growrate_100.png Graphic file (type png)
 <use images/fox_extinction_vs_growrate_100.png>
 Package pdftex.def Info: images/fox_extinction_vs_growrate_100.png  used on input line 139.
-(pdftex.def)             Requested size: 422.77664pt x 253.66338pt.
-) (main.lot [9])
+(pdftex.def)             Requested size: 435.78593pt x 261.47084pt.
+) (main.lot [8])
 \tf@lot=\write4
 \openout4 = `main.lot'.
 
@@ -369,4 +394,661 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--11
  []
 
 
-Underfull \hbox (badness 2197) in para
+Underfull \hbox (badness 2197) in paragraph at lines 11--11
+[]\OT1/cmr/m/n/10 More com-plex; com-pu-ta-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]\OT1/cmr/bx/n/10 Agent-Based Mod-el-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+[]\OT1/cmr/bx/n/10 Equation-Based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\OT1/cmr/m/n/10 such as each rab-bit or
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+[]\OT1/cmr/m/n/10 Models pop-u-la-tions as
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+\OT1/cmr/m/n/10 on ag-gre-gate prop-er-ties
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+\OT1/cmr/m/n/10 rather than in-di-vid-ual
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 26--26
+[]\OT1/cmr/m/n/10 Incorporates a high de-gree
+ []
+
+
+Underfull \hbox (badness 6445) in paragraph at lines 26--26
+\OT1/cmr/m/n/10 of ran-dom-ness in agents'
+ []
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 26--26
+\OT1/cmr/m/n/10 move-ments, births, deaths
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]\OT1/cmr/m/n/10 Explicitly mod-els space,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\OT1/cmr/m/n/10 al-low-ing agents to move
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\OT1/cmr/m/n/10 and in-ter-act within an
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+[]\OT1/cmr/m/n/10 Generally lacks spa-tial
+ []
+
+
+Underfull \hbox (badness 3930) in paragraph at lines 30--30
+[]\OT1/cmr/m/n/10 Enables emer-gent pat-terns
+ []
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 30--31
+[]\OT1/cmr/m/n/10 Patterns are out-comes of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+\OT1/cmr/m/n/10 gov-ern-ing equa-tions; less
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+[]\OT1/cmr/m/n/10 Simplifies in-ter-ac-tions by
+ []
+
+
+Underfull \hbox (badness 4927) in paragraph at lines 32--33
+\OT1/cmr/m/n/10 av-er-ag-ing be-hav-iors across
+ []
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 34--34
+[]\OT1/cmr/m/n/10 More bi-o-log-i-cally re-al-is-tic,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 but com-pu-ta-tion-ally
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+[]\OT1/cmr/m/n/10 Abstract, an-a-lyt-i-cally
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/cmr/m/n/10 tractable, and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/cmr/m/n/10 com-pu-ta-tion-ally less
+ []
+
+
+Underfull \hbox (badness 7631) in paragraph at lines 34--35
+\OT1/cmr/m/n/10 ex-pen-sive, but may lack
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (main.bbl [9 <./images/phase_portraits1.1.4.png>]
+main.bbl:16: Missing $ inserted.
+<inserted text> 
+                $
+l.16 \newblock error_
+                     comparison_rk4_stable_0.13.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:21: Missing $ inserted.
+<inserted text> 
+                $
+l.21 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:21: Missing } inserted.
+<inserted text> 
+                }
+l.21 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (321.1657pt too wide) in paragraph at lines 15--21
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 error$[]\OML/cmm/m/it/10 omparison[]k\OT1/cmr/m/n/10 4[]\OML/cmm/m/it/10 table[]:\OT1/cmr/m/n/10 13\OML/cmm/m/it/10 : https \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==github:com=youngaryan=COM\OT1/cmr/m/n/10 3001[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 =images=error[]omparison[]k\OT1/cmr/m/n/10 4[]\OML/cmm/m/it/10 table[]:\OT1/cmr/m/n/10 13\OML/cmm/m/it/10 :png; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:21: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.21 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+main.bbl:26: Missing $ inserted.
+<inserted text> 
+                $
+l.26   https://github.com/youngaryan/COM3001_
+                                             ASSIGN/blob/main/1.1.4/images/e...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:29: Missing $ inserted.
+<inserted text> 
+                $
+l.29 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:29: Missing } inserted.
+<inserted text> 
+                }
+l.29 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (285.72072pt too wide) in paragraph at lines 23--29
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 Lorenz at-trac-tor er-ror 1000 time steps.  https://github.com/youngaryan/COM3001$[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 =images=error[]omparison\OT1/cmr/m/n/10 1000\OML/cmm/m/it/10 :png; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:29: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.29 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+main.bbl:34: Missing $ inserted.
+<inserted text> 
+                $
+l.34   https://github.com/youngaryan/COM3001_
+                                             ASSIGN/blob/main/1.1.4/1.1.4.py...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:36: Missing $ inserted.
+<inserted text> 
+                $
+l.36 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:36: Missing } inserted.
+<inserted text> 
+                }
+l.36 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (133.73448pt too wide) in paragraph at lines 31--36
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 Lorenz at-trac-tor vi-su-al-iza-tion.  https://github.com/youngaryan/COM3001$[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 :py; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:36: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.36 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+main.bbl:41: Missing $ inserted.
+<inserted text> 
+                $
+l.41   https://github.com/youngaryan/COM3001_
+                                             ASSIGN/blob/main/1.2.1/optuna_1...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:44: Missing $ inserted.
+<inserted text> 
+                $
+l.44 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:44: Missing } inserted.
+<inserted text> 
+                }
+l.44 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (155.9452pt too wide) in paragraph at lines 38--44
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 Lorenz at-trac-tor vi-su-al-iza-tion.  https://github.com/youngaryan/COM3001$[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 =optuna[]:\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :py; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:44: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.44 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+main.bbl:49: Missing $ inserted.
+<inserted text> 
+                $
+l.49   https://github.com/youngaryan/COM3001_
+                                             ASSIGN/blob/main/1.1.4/images/p...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:52: Missing $ inserted.
+<inserted text> 
+                $
+l.52 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:52: Missing } inserted.
+<inserted text> 
+                }
+l.52 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (221.14302pt too wide) in paragraph at lines 46--52
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 Lorenz at-trac-tor vi-su-al-iza-tion.  https://github.com/youngaryan/COM3001$[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 =images=phase[]ortraits:png; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:52: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.52 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+main.bbl:57: Missing $ inserted.
+<inserted text> 
+                $
+l.57   https://github.com/youngaryan/COM3001_
+                                             ASSIGN/blob/main/1.1.4/images/e...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:60: Missing $ inserted.
+<inserted text> 
+                $
+l.60 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:60: Missing } inserted.
+<inserted text> 
+                }
+l.60 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (286.05405pt too wide) in paragraph at lines 54--60
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 Lorenz at-trac-tor vi-su-al-iza-tion er-ror 3 steps.  https://github.com/youngaryan/COM3001$[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 =images=error[]omparison:png; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:60: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.60 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+main.bbl:65: Missing $ inserted.
+<inserted text> 
+                $
+l.65   https://github.com/youngaryan/COM3001_
+                                             ASSIGN/blob/main/1.2.1/images/o...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:68: Missing $ inserted.
+<inserted text> 
+                $
+l.68 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:68: Missing } inserted.
+<inserted text> 
+                }
+l.68 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (214.87898pt too wide) in paragraph at lines 62--68
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 op-tu-na-com-par-ison-im-age.13.  https://github.com/youngaryan/COM3001$[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 =images=optuna[]orenz[]d:png; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:68: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.68 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+main.bbl:71: Missing $ inserted.
+<inserted text> 
+                $
+l.71 \newblock youngaryantwo_
+                             initial_conditions_3d_2separateicode.13.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:76: Missing $ inserted.
+<inserted text> 
+                $
+l.76 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:76: Missing } inserted.
+<inserted text> 
+                }
+l.76 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--76
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 youngaryantwo$[]\OML/cmm/m/it/10 nitial[]onditions[]d[]separateicode:\OT1/cmr/m/n/10 13\OML/cmm/m/it/10 : https \OT1/cmr/m/n/10 :
+ []
+
+
+Overfull \hbox (77.65186pt too wide) in paragraph at lines 70--76
+\OML/cmm/m/it/10 ==github:com=youngaryan=COM\OT1/cmr/m/n/10 3001[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 =images=two[]nitial[]onditions[]d[]eparate[]:png; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:76: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.76 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+main.bbl:79: Missing $ inserted.
+<inserted text> 
+                $
+l.79 \newblock youngaryantwo_
+                             initial_conditions_3d_3separateicode.13.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:84: Missing $ inserted.
+<inserted text> 
+                $
+l.84 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:84: Missing } inserted.
+<inserted text> 
+                }
+l.84 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--84
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 youngaryantwo$[]\OML/cmm/m/it/10 nitial[]onditions[]d[]separateicode:\OT1/cmr/m/n/10 13\OML/cmm/m/it/10 : https \OT1/cmr/m/n/10 :
+ []
+
+
+Overfull \hbox (77.65186pt too wide) in paragraph at lines 78--84
+\OML/cmm/m/it/10 ==github:com=youngaryan=COM\OT1/cmr/m/n/10 3001[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 =images=two[]nitial[]onditions[]d[]eparate[]:png; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:84: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.84 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[10 <./images/error_comparison1.1.4.png>]
+
+LaTeX Warning: Text page 11 contains only floats.
+
+[11 <./images/error_comparison_same_times.png> <./images/error_comparison1000_114.png>]
+main.bbl:87: Missing $ inserted.
+<inserted text> 
+                $
+l.87 \newblock youngaryantwo_
+                             initial_conditions_3d_separateicode.13.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:92: Missing $ inserted.
+<inserted text> 
+                $
+l.92 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:92: Missing } inserted.
+<inserted text> 
+                }
+l.92 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--92
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 youngaryantwo$[]\OML/cmm/m/it/10 nitial[]onditions[]d[]eparateicode:\OT1/cmr/m/n/10 13\OML/cmm/m/it/10 : https \OT1/cmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 5652) in paragraph at lines 86--92
+\OML/cmm/m/it/10 ==github:com=youngaryan=COM\OT1/cmr/m/n/10 3001[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 =two[]iff[]nitial[]ond:py; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:92: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.92 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[12 <./images/error_comparison_rk4_stable_0.13.png> <./images/optuna_lorenz_3d.png>]
+main.bbl:95: Missing $ inserted.
+<inserted text> 
+                $
+l.95 \newblock youngaryantwo_
+                             initial_conditions_3d_separateimg.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:100: Missing $ inserted.
+<inserted text> 
+                $
+l.100 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.bbl:100: Missing } inserted.
+<inserted text> 
+                }
+l.100 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--100
+[]\OT1/cmr/m/sc/10 Golbaghi, A.  \OT1/cmr/m/n/10 youngaryantwo$[]\OML/cmm/m/it/10 nitial[]onditions[]d[]eparateimg: https \OT1/cmr/m/n/10 :
+ []
+
+
+Overfull \hbox (73.16573pt too wide) in paragraph at lines 94--100
+\OML/cmm/m/it/10 ==github:com=youngaryan=COM\OT1/cmr/m/n/10 3001[]\OML/cmm/m/it/10 SSIGN=blob=main=\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 =images=two[]nitial[]onditions[]d[]eparate:png; \OT1/cmr/m/n/10 2025\OML/cmm/m/it/10 : Accessed \OT1/cmr/m/n/10 :
+ []
+
+main.bbl:100: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.100 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+) [13 <./images/two_initial_conditions_3d_separate.png> <./images/two_initial_conditions_3d_separate_2.png>] [14 <./images/two_initial_conditions_3d_separate_3.png> <./images/Ecolab_simulation.png> <./images/Ecolab_simulation_no_foxes.png>] [15 <./images/avg_final_foxes_vs_growrate_100.png> <./images/boxplot_final_foxes_by_growrate_100.png>] [16 <./images/boxplot_final_rabbits_by_growrate_100.png> <./images/fox_extinction_vs_growrate_100.png>] [17] (main.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2998 strings out of 474486
+ 52188 string characters out of 5743756
+ 1950542 words of memory out of 5000000
+ 25245 multiletter control sequences out of 15000+600000
+ 561810 words of font info for 49 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,12n,65p,1049b,284s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\aryan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (17 pages, 9306800 bytes).
+PDF statistics:
+ 153 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+
