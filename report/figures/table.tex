@@ -37,25 +37,51 @@ Adaptive Methods (e.g., RK45) & Varies with adaptive step-size & Dynamically adj
     \caption{Comparison of Agent-Based Modeling (ABM) and Equation-Based Modeling (EBM)}
 \end{table}
 
+% \begin{table}[h!]
+%     \centering
+%     \begin{tabular}{lcccc}
+%     \hline
+%     \textbf{Variable} & \textbf{Mean} & \textbf{Std Dev} & \textbf{Min} & \textbf{Max} \\
+%     \hline
+%     Peak Rabbits     & 317.00 & 44.60  & 249   & 433  \\
+%     Min Rabbits      & 13.57  & 5.48   & 3     & 27   \\
+%     Final Rabbits    & 88.03  & 68.33  & 12    & 257  \\
+%     Peak Foxes       & 34.07  & 7.32   & 18    & 51   \\
+%     Min Foxes        & 4.33   & 2.29   & 0     & 10   \\
+%     Final Foxes      & 18.60  & 9.70   & 0     & 36   \\
+%     Peak Grass       & 5055.33 & 702.21 & 4307  & 7490 \\
+%     Min Grass        & 1122.37 & 141.13 & 775   & 1324 \\
+%     Final Grass      & 2646.97 & 887.27 & 1614  & 4444 \\
+%     \hline
+%     \end{tabular}
+%     \caption{
+%         Descriptive statistics of key ecological variables recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run spanning up to 1000 iterations. The variables include the peak, minimum, and final values for the population of rabbits and foxes, as well as the amount of grass in the environment. These metrics provide insight into the dynamics of species interactions and resource availability, helping to evaluate ecosystem sustainability and identify scenarios that may lead to population collapse or resource depletion. See Figure~\ref{fig:boxplot_metrics_100_sim} for the distribution of these metrics.
+%     }
+%     \label{tab:simulation_stats_2.1}
+% \end{table}
+
+
 \begin{table}[h!]
     \centering
-    \begin{tabular}{lcccc}
+    \begin{tabular}{|c|c|c|c|}
     \hline
-    \textbf{Variable} & \textbf{Mean} & \textbf{Std Dev} & \textbf{Min} & \textbf{Max} \\
+    \textbf{Growrate} & \textbf{Fox Extinction Probability} & \textbf{Average Final Foxes} & \textbf{Fox Std Dev} \\
     \hline
-    Peak Rabbits     & 317.00 & 44.60  & 249   & 433  \\
-    Min Rabbits      & 13.57  & 5.48   & 3     & 27   \\
-    Final Rabbits    & 88.03  & 68.33  & 12    & 257  \\
-    Peak Foxes       & 34.07  & 7.32   & 18    & 51   \\
-    Min Foxes        & 4.33   & 2.29   & 0     & 10   \\
-    Final Foxes      & 18.60  & 9.70   & 0     & 36   \\
-    Peak Grass       & 5055.33 & 702.21 & 4307  & 7490 \\
-    Min Grass        & 1122.37 & 141.13 & 775   & 1324 \\
-    Final Grass      & 2646.97 & 887.27 & 1614  & 4444 \\
+    60 & 0.07 & 17.20 & 9.14 \\
+    65 & 0.07 & 23.03 & 12.35 \\
+    70 & 0.04 & 26.46 & 13.19 \\
+    75 & 0.08 & 28.66 & 14.62 \\
+    80 & 0.08 & 27.67 & 16.86 \\
+    90 & 0.16 & 30.28 & 20.86 \\
+    100 & 0.18 & 26.70 & 20.41 \\
+    140 & 0.43 & 31.22 & 36.62 \\
+    180 & 0.55 & 29.99 & 44.33 \\
+    220 & 0.63 & 28.90 & 48.93 \\
     \hline
     \end{tabular}
     \caption{
-        Descriptive statistics of key ecological variables recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run spanning up to 1000 iterations. The variables include the peak, minimum, and final values for the population of rabbits and foxes, as well as the amount of grass in the environment. These metrics provide insight into the dynamics of species interactions and resource availability, helping to evaluate ecosystem sustainability and identify scenarios that may lead to population collapse or resource depletion. See Figure~\ref{fig:boxplot_metrics_100_sim} for the distribution of these metrics.
+        Descriptive statistics of key ecological variables recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run spanning up to 1000 iterations. The variables include the peak, minimum, and final values for the population of rabbits and foxes, as well as the amount of grass in the environment. These metrics provide insight into the dynamics of species interactions and resource availability, helping to evaluate ecosystem sustainability and identify scenarios that may lead to population collapse or resource depletion. See Figures \ref{fig:avg_final_foxes_vs_growrate_100_2.1}, \ref{fig:fox_extinction_vs_growrate_100_2.1},
+         \ref{fig:boxplot_final_foxes_by_growrate_100_2.1}, and \ref{fig:boxplot_final_rabbits_by_growrate_100_2.1} for the distribution of these metrics.
     }
     \label{tab:simulation_stats_2.1}
 \end{table}
