@@ -1,0 +1,6 @@
+\section{Optuna \cite{akiba2019optuna} Hyperparameter Optimization}
+
+
+\textbf{Computational Efficiency:} Although smaller time steps can improve accuracy, they also lead to higher computational costs. To strike an appropriate balance between accuracy and efficiency, I employed a hyperparameter optimization approach using the Optuna library \cite{akiba2019optuna} . A sensitivity analysis was conducted by varying \(\Delta t\) using the objective function (\ref{eq:composite_objective}). This analysis confirmed that a time step of \(\Delta t = 0.0073\) (see Figure \ref{fig:optuna_lorenz_3d} for comparison).
+\noindent
+Optimization was guided by a \textbf{composite objective function}, which incorporates both the simulation error and a proxy for computational cost, its formula can be seen in appendices \ref{eq:composite_objective}.

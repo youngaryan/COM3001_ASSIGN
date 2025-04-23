@@ -4,9 +4,9 @@
 
 The Lorenz system is a set of three coupled, nonlinear differential equations \cite{1963JAtS...20..130L},
  which was introduced by Edward Lorenz in 1963 as a simplified model for atmospheric convection.
-  Originally it was derived to study weather prediction and its formula can be found at appendix \ref{eq:lorenz}:
+  Originally it was derived to study weather prediction and its formula is outlined in appendix \ref{eq:lorenz}.
 
-It revealed that even deterministic systems can exhibit unpredictable and chaotic behavior. Lorenz's discovery of the sensitive dependence on initial conditions is now known as the "butterfly effect" \cite{apsLorenz2003}: a concept that demonstrates how small changes in the initial state of a system can lead to drastically divergent trajectories over time, and it has transformed the understanding of dynamical systems by showing that small differences in starting states can lead to dramatically divergent results over time.
+It revealed that even deterministic systems can exhibit unpredictable and chaotic behavior. Lorenz's discovery of the sensitive dependence on initial conditions is now known as the "butterfly effect" \cite{apsLorenz2003}; a concept that demonstrates how small changes in the initial state of a system can lead to drastically divergent trajectories over time, and it has transformed the understanding of dynamical systems by showing that small differences in starting states can lead to dramatically divergent results over time.
 
 Historically, the Lorenz system marked a paradigm shift. Before Lorenz's work, many scientists assumed that small changes in initial conditions would only lead to small variations in future behavior. However, Lorenz showed that the weather, which was considered a definitive example of predictable physical systems, could be inherently unpredictable. This insight laid the foundation for modern chaos theory and encouraged extensive research into nonlinear dynamics \cite{apsLorenz2003}.
 
@@ -14,7 +14,7 @@ Beyond its initial role in meteorology, the Lorenz system has found widespread a
 
 In recent years, the relevance of the Lorenz system has grown further with advances in computational methods and interdisciplinary applications. For instance, researchers have employed data assimilation techniques and machine learning approaches such as reservoir computing to both forecast and analyze chaotic dynamics using the Lorenz attractor as a prototype. These modern developments underscore the system’s enduring importance: they not only provide new tools for dealing with uncertainties in weather forecasting but also offer insights into controlling chaotic systems in engineering and natural sciences \cite{Pathak_2017}. Furthermore, studies exploring quantum computing approaches to analyze the non-Hermitian Jacobian matrix of the Lorenz system have opened promising avenues for future research in atmospheric physics and beyond \cite{armaos2024quantumcomputingatmosphericdynamics}.
 
-Overall, the Lorenz system remains very important in the study of nonlinear dynamical systems. Its historical impact has been reshaping our understanding of predictability and determinism, and it continues to influence modern scientific research. As contemporary studies extend its applications into new fields, the Lorenz model exemplifies how a deceptively simple set of equations can encapsulate the profound behavior of nature, making it directly relevant to a wide array of exercises and research endeavors in mathematical modeling.
+Overall, the Lorenz system remains very important in the study of nonlinear dynamical systems. Its historical impact has been reshaping our understanding of predictability and determinism, and it continues to influence modern scientific research. As contemporary studies extend its applications into new fields, the Lorenz model exemplifies how a deceptively simple set of equations can encapsulate the profound behavior of nature, making it directly relevant to a wide list of exercises and research work in mathematical modeling.
 
 \subsubsection{How to use numerical methods to simulate the system, }
 As shown in the Lorenz Equation \ref{eq:lorenz}, Because of the system's nonlinearity and sensitivity to initial conditions (the "butterfly effect"), an analytical solution is not feasible. Instead, we can use numerical integration. In this section, I present two methods, alongside an analysis of time step effects and the simulation results:
@@ -30,7 +30,7 @@ Although this formula is straightforward, the Euler method is only first order a
 
 RK4 is a more accurate method that uses intermediate calculations to achieve fourth-order accuracy. The RK4 update rule for the Lorenz system is given by the formula in the appendix \ref{eq:rk4_lorenz}. This method is more computationally intensive than Euler's method, but it provides a much better approximation of the true solution, especially for larger time steps.
 The RK4 method is particularly effective for systems like the Lorenz equations, where the dynamics can change rapidly. By using multiple intermediate steps to calculate the slope, RK4 captures the curvature of the solution trajectory more accurately than Euler's method, which only uses the slope at the beginning of the interval. This results in a more stable and accurate approximation of the system's behavior over time.
-The RK4 method is widely used in various fields, including physics, engineering, and finance, where accurate numerical solutions to differential equations are required. Its ability to handle stiff equations and chaotic systems makes it a valuable tool for researchers and practitioners alike.
+The RK4 method is widely used in various fields, including physics, engineering, and finance, where accurate numerical solutions to differential equations are required. Its ability to handle stiff equations and chaotic systems makes it a valuable tool for researchers and practitioners.
 
 \subsubsection{Time Step Analysis}
 
@@ -44,11 +44,12 @@ While fixed time step methods such as Euler and RK4 are usefull, adaptive integr
 
 
 \subsubsection{Simulation and Results}
-The simulations were conducted using both the Explicit Euler and the Fourth-Order Runge-Kutta (RK4) methods over a total simulation time of 40 seconds \cite{youngaryanLorenzPlot1.1.4}. Several time step sizes were considered, ranging from small steps ($\Delta t = 0.001$) up to larger steps ($\Delta t = 0.1$). The results of the simulations are presented in the following figures \ref{fig:lorenz_vis}, \ref{fig:error_comparison1.1.4}:
+The simulations were conducted using both the Explicit Euler and the Fourth-Order Runge-Kutta (RK4) methods over a total simulation time of 40 seconds. Several time step sizes were considered, ranging from small steps ($\Delta t = 0.001$) up to larger steps ($\Delta t = 0.1$). The results of the simulations are presented in the following figures \ref{fig:lorenz_vis}, \ref{fig:error_comparison1.1.4}:
 
 
 My observations for different time steps are as follows:
-\textbf{Small} $\Delta t$ (e.g., 0.001): Both methods yield a stable, accurate Lorenz attractor. RK4 shows less numerical distortion than Euler.\\
+
+\textbf{Small} $\Delta t$ (e.g., 0.001): Both methods produce a stable, accurate Lorenz attractor. RK4 shows less numerical distortion than Euler.\\
 
 \textbf{Intermediate} $\Delta t$ (0.01): Euler solutions begin to show noticeable distortion. RK4 typically remains close to the true attractor, but still accumulates some error.\\
 
@@ -69,7 +70,7 @@ It is well known that different numerical integration methods exhibit distinct e
     \item \textbf{Fourth-Order Runge-Kutta (RK4) Method:} In contrast, the RK4 method exhibits a much smaller local truncation error of \(O(\Delta t^5)\), resulting in a global error that scales as \(O(\Delta t^4)\). This steep reduction in error with decreasing \(\Delta t\) makes RK4 far more accurate for the same step sizes.
 \end{itemize}
 
-The simulation results align with these theoretical expectations. For example, as seen in Figure~\ref{fig:lorenz_error}, when the time step increases beyond \(0.01\), the Euler method's error grows rapidly, failing to accurately reproduce the Lorenz attractor. In contrast, the RK4 method maintains a significantly lower error, demonstrating its superior stability and accuracy even at moderately larger time steps.
+The simulation results align with these theoretical expectations. For example, as seen in Figure~\ref{fig:lorenz_error1000}, when the time step increases beyond \(0.01\), the Euler method's error grows rapidly, failing to accurately reproduce the Lorenz attractor. In contrast, the RK4 method maintains a significantly lower error, demonstrating its superior stability and accuracy even at moderately larger time steps.
 
 \paragraph{Error Metric Details:}
 The average Euclidean error is computed by comparing the solution at each time step from the numerical method under investigation with the corresponding state of the reference solution. By averaging the Euclidean distances over all time steps, we obtain a single scalar measure of the overall deviation. This metric provides a straightforward yet effective means to quantify how numerical errors accumulate over time, particularly in chaotic systems where small errors can lead to substantial deviations in the trajectory.

@@ -7,18 +7,24 @@ The choice of the RK4 method is supported by the following considerations:
 \begin{itemize}
     \item \textbf{Accuracy:} As illustrated in Figure \ref{fig:error_comparison_same_times} and Table \ref{tab:integration_methods}, the RK4 method exhibits substantially lower local truncation errors compared to the Euler method, making it more reliable in capturing the intricate dynamics of the system.
     \item \textbf{Stability:} Experimental results (see Figure \ref{fig:lorenz_error1000}) indicate that the Euler method becomes unstable for time steps exceeding \(\Delta t > 0.025\). In contrast, RK4 remains stable even for time steps as large as \(\Delta t = 0.13\) (see \ref{fig:error_comparison_rk4_stable_0.13}), proving its robustness for simulating chaotic systems.
-    \item \textbf{Computational Efficiency:} Although smaller time steps can improve accuracy, they also lead to higher computational costs. To strike an appropriate balance between accuracy and efficiency, I employed a hyperparameter optimization approach using the Optuna library \cite{akiba2019optuna} (see also my implementation in \cite{youngaryanOptunaCode}). A sensitivity analysis was conducted by varying \(\Delta t\) using the objective function (\ref{eq:composite_objective}). This analysis confirmed that a time step of \(\Delta t = 0.0073\) (see Figure \ref{fig:optuna_lorenz_3d} for comparison).
+    \item \textbf{Computational Efficiency:} Although smaller time steps improve accuracy for RK4 (global error proportional \(\Delta t^4\)), they also increase the number of function evaluations—and therefore the total runtime—proportionally to \(1/\Delta t\).  By combining the known error scaling with a simple cost model (runtime proportional \(1/\Delta t\)), we find that
+    \[
+        \text{error} \times \text{cost} \;\approx\; C\,\Delta t^4 \times \frac{1}{\Delta t}
+        \;=\; C\,\Delta t^3
+    \]
+    is minimized near \(\Delta t=0.01\) for our 40 s integration window (4000 steps).  This choice produce trajectory errors below \(10^{-6}\) (see Figure \ref{fig:error_trade_off_1_2_1}) while completing each run in under a second on a typical CPU.  
+    
+    As an additional experiment, we also applied a hyperparameter-optimization procedure—varying \(\Delta t\) against a composite error cost objective—which suggested an optimal step of \(\Delta t = 0.0073\).  Details of that study, together with the full Optuna setup and convergence plots (e.g.\ Figure \ref{fig:optuna_lorenz_3d}), can be found in Appendix Optuna Hyperparameter Optimization.  For clarity and reproducibility in the main text, however, we adopt \(\Delta t = 0.01\).
+      
 \end{itemize}
 
-\noindent
-Optimization was guided by a \textbf{composite objective function}, which incorporates both the simulation error and a proxy for computational cost, its formula can be seen in appendices \ref{eq:composite_objective}.
 
 \subsubsection{Generation and Analysis of Phase Portraits}
-To demonstrate the characteristic chaotic behavior ("butterfly effect") of the Lorenz system, I have chosen two similar initial conditions of (0.01, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of \(\Delta t = 0.0073\).
+To demonstrate the characteristic chaotic behavior ("butterfly effect") of the Lorenz system, I have chosen two similar initial conditions of (0.01, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of \(\Delta t = 0.01\).
 
 Figures \ref{fig:two_initial_conditions_3d_separate}, \ref{fig:two_initial_conditions_3d_separate_2} and \ref{fig:two_initial_conditions_3d_separate_3} display these phase portraits. Although the initial conditions differ only in the $x$ component by a small amount, the resulting trajectories clearly exhibit chaotic divergence over time, Both portraits exhibit the same broad “butterfly” structure, but their trajectories do not remain synchronized. As time goes on, the small difference amplifies until the solutions appear uncorrelated.
 
 \subsubsection{What Does It Mean for a System to Be Chaotic?}
 A chaotic system is a deterministic system that is unpredictable and seemingly random behavior due to its extreme sensitivity to initial conditions. This means that even very small differences in starting conditions can lead to completely different outcomes over time. Such systems are characterized by aperiodic long-term behavior, meaning they do not settle into regular cycles, and their evolution over time appears disorderly despite being governed by deterministic laws.
 
-for more details on variances in in the initial condition more details can be found in theb \textbf{Generation and Analysis of Phase Portraits} section.
+for more details on variances in in the initial condition more details can be found in the \textbf{Generation and Analysis of Phase Portraits (previous)} section.

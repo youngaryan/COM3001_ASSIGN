@@ -1,4 +1,4 @@
-\documentclass[6pt]{article}
+\documentclass[10pt]{article}
 \usepackage[margin=0.9in]{geometry}
 \usepackage{setspace}
 \usepackage[toc,page]{appendix}
@@ -33,21 +33,30 @@ Sheffield, England \\
 
 
 
-
 \newpage
+\clearpage
+\section{Appendixes}
 \appendix
-
+\input{appendices/optuna.tex}
 \input{appendices/formulas.tex}
 
+\newpage
+\clearpage
 
 \section{images}
-\listoffigures
+% \listoffigures
 \input{figures/fig}
 
+\newpage
+\clearpage
 
 \section{Tables}
-\listoftables
+% \listoftables
 \input{figures/table}
+
+
+\newpage
+\clearpage
 
 \section{References}
 \bibliographystyle{acm} 
