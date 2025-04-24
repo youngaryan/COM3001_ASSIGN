@@ -7,14 +7,14 @@ The choice of the RK4 method is supported by the following considerations:
 \begin{itemize}
     \item \textbf{Accuracy:} As illustrated in Figure \ref{fig:error_comparison_same_times} and Table \ref{tab:integration_methods}, the RK4 method exhibits substantially lower local truncation errors compared to the Euler method, making it more reliable in capturing the intricate dynamics of the system.
     \item \textbf{Stability:} Experimental results (see Figure \ref{fig:lorenz_error1000}) indicate that the Euler method becomes unstable for time steps exceeding \(\Delta t > 0.025\). In contrast, RK4 remains stable even for time steps as large as \(\Delta t = 0.13\) (see \ref{fig:error_comparison_rk4_stable_0.13}), proving its robustness for simulating chaotic systems.
-    \item \textbf{Computational Efficiency:} Although smaller time steps improve accuracy for RK4 (global error proportional \(\Delta t^4\)), they also increase the number of function evaluations—and therefore the total runtime—proportionally to \(1/\Delta t\).  By combining the known error scaling with a simple cost model (runtime proportional \(1/\Delta t\)), we find that
+    \item \textbf{Computational Efficiency:} Although smaller time steps improve accuracy for RK4 (global error proportional \(\Delta t^4\)), they also increase the number of function evaluations—and therefore the total runtime proportionally to \(1/\Delta t\).  By combining the known error scaling with a simple cost model (runtime proportional \(1/\Delta t\)), we find that
     \[
         \text{error} \times \text{cost} \;\approx\; C\,\Delta t^4 \times \frac{1}{\Delta t}
         \;=\; C\,\Delta t^3
     \]
-    is minimized near \(\Delta t=0.01\) for our 40 s integration window (4000 steps).  This choice produce trajectory errors below \(10^{-6}\) (see Figure \ref{fig:error_trade_off_1_2_1}) while completing each run in under a second on a typical CPU.  
+    is minimized near \(\Delta t=0.01\) for our 40 s integration window (4000 steps).  This choice produce trajectory errors below \(10^{-6}\) (see Figure \ref{fig:error_trade_off_1_2_1}) while completing each run in under a second on a typical CPU (see Figure \ref{fig:0_001_lorenz_3d} for comparison between the proposed time step of \(\Delta t = 0.01\) and the reference time step of \(\Delta t = 0.001\)).
     
-    As an additional experiment, we also applied a hyperparameter-optimization procedure—varying \(\Delta t\) against a composite error cost objective—which suggested an optimal step of \(\Delta t = 0.0073\).  Details of that study, together with the full Optuna setup and convergence plots (e.g.\ Figure \ref{fig:optuna_lorenz_3d}), can be found in Appendix Optuna Hyperparameter Optimization.  For clarity and reproducibility in the main text, however, we adopt \(\Delta t = 0.01\).
+    As an additional experiment, we also applied a hyperparameter-optimization procedure—varying \(\Delta t\) against a composite error cost objective—which suggested an optimal step of \(\Delta t = 0.0073\).  Details of that study, together with the full Optuna setup and convergence plots (e.g.\ Figure \ref{fig:optuna_lorenz_3d}), can be found in Appendix A(Optuna Hyperparameter Optimization).  For clarity and reproducibility in the main text, however, we adopt \(\Delta t = 0.01\).
       
 \end{itemize}
 

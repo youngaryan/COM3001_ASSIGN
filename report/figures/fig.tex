@@ -49,12 +49,17 @@
   \label{fig:error_trade_off_1_2_1}
 \end{figure}
 
-
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=1.1\linewidth]{images/0_01_lorenz_3d.png}
+  \caption{Comparison between reference system with \(\Delta t = 0.001\) and a less computationally expensive system with step size of \(\Delta t = 0.01\)}
+  \label{fig:0_001_lorenz_3d}
+\end{figure}
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=1.1\linewidth]{images/optuna_lorenz_3d.png}
-  \caption{Comparison between reference system with \(\Delta t = 0.001\) and a less computationally expensive system with step size of \(\Delta t = 0.0073\), for this I used Optuna \cite{akiba2019optuna} with 50 trials.}
+  \caption{Comparison between reference system with \(\Delta t = 0.001\) and a less computationally expensive system with step size of \(\Delta t = 0.0073\), for this I used Optuna \cite{akiba2019optuna} with 50 trials. as we can see this has a lower error than the previous one attempt with \(\Delta t = 0.01\). with the time step of \(\Delta t = 0.0073\) we have \((40 \div 0.0073 = 5479)\), with the time step of \(\Delta t = 0.01\) we have \((40 \div 0.01 = 4000)\) steps.}
   \label{fig:optuna_lorenz_3d}
 \end{figure}
 
@@ -94,12 +99,23 @@ the time steps of$\Delta t = 0.0073$ to show the chaotic behavior of the system.
 \end{figure}
 
 
+
+
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=1.1\linewidth]{images/Ecolab_simulation_no_foxes.png}
-  \caption{Simulation of a prey-predator system with the following initial settings: \texttt{Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt{Nrabbits = 200}, \texttt{Nfoxes = 15}. Rabbits are initialized with \texttt{speed=1}, \texttt{vision=5}, \texttt{breedfreq=10}, \texttt{breedfood=10}, and \texttt{maxage=40}. And ero foxes.}
+  \caption{Simulation of a prey-predator system with the following initial settings: \texttt{Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt{Nrabbits = 200}, \texttt{Nfoxes = 15}. Rabbits are initialized with \texttt{speed=1}, \texttt{vision=5}, \texttt{breedfreq=10}, \texttt{breedfood=10}, and \texttt{maxage=40}. And no foxes.}
   \label{fig:Ecolab_pred_prey_no_foxes}
 \end{figure}
+
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=1.1\linewidth]{images/population_time_series.png}
+  \caption{Time series of total grass, rabbits and foxes units over 1000 iterations, this plot highlights correlation between the populations of the foxes and grass; as the fox population increases, grass abundance also tends to rise. This is expected, as a higher number of foxes leads to more rabbit being hunted, which in turn reduces the grass eaten by rabbits. Overall the system seems to be sustaining itself . Simulation of a prey-predator system with the following initial settings: \texttt{Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt{Nrabbits = 200}, \texttt{Nfoxes = 15}. Rabbits are initialized with \texttt{speed=1}, \texttt{vision=5}, \texttt{breedfreq=10}, \texttt{breedfood=10}, and \texttt{maxage=40}. Foxes are initialized with \texttt{speed=3}, \texttt{vision=7}, \texttt{breedfreq=30}, \texttt{breedfood=20}, and \texttt{maxage=80}.}
+  \label{fig:time_series}
+\end{figure}
+
 
 
 \begin{figure}[!ht]

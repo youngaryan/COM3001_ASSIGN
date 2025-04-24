@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
 \bibitem{akiba2019optuna}
 {\sc Akiba, T., Sano, S., Yanase, T., Ohta, T., and Koyama, M.}
@@ -10,93 +10,6 @@
 {\sc Armaos, V., Argiriou, A.~A., and Kioutsioukis, I.}
 \newblock Quantum computing and atmospheric dynamics: Exploring the lorenz
   system, 2024.
-
-\bibitem{youngaryanerror_comparison_rk4_stable_0.13sCode}
-{\sc Golbaghi, A.}
-\newblock error_comparison_rk4_stable_0.13.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/error_comparison_rk4_stable_0.13.png,
-  2025.
-\newblock Accessed: 2025-04-01.
-
-\bibitem{youngaryanLorenzError1.1.41000_image}
-{\sc Golbaghi, A.}
-\newblock Lorenz attractor error 1000 time steps.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/error_comparison1000.png,
-  2025.
-\newblock Accessed: 2025-04-01.
-
-\bibitem{youngaryanLorenzPlot1.1.4}
-{\sc Golbaghi, A.}
-\newblock Lorenz attractor visualization.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/1.1.4.py, 2025.
-\newblock Accessed: 2025-04-01.
-
-\bibitem{youngaryanOptunaCode}
-{\sc Golbaghi, A.}
-\newblock Lorenz attractor visualization.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.2.1/optuna_1.2.py,
-  2025.
-\newblock Accessed: 2025-04-01.
-
-\bibitem{youngaryanLorenzPlot1.1.4_image}
-{\sc Golbaghi, A.}
-\newblock Lorenz attractor visualization.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/phase_portraits.png,
-  2025.
-\newblock Accessed: 2025-04-01.
-
-\bibitem{youngaryanLorenzError1.1.4_image}
-{\sc Golbaghi, A.}
-\newblock Lorenz attractor visualization error 3 steps.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/error_comparison.png,
-  2025.
-\newblock Accessed: 2025-04-01.
-
-\bibitem{youngaryanoptunaComparisonImage}
-{\sc Golbaghi, A.}
-\newblock optunacomparisonimage.13.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.2.1/images/optuna_lorenz_3d.png,
-  2025.
-\newblock Accessed: 2025-04-01.
-
-\bibitem{youngaryantwo_initial_conditions_3d_2separateICode}
-{\sc Golbaghi, A.}
-\newblock youngaryantwo_initial_conditions_3d_2separateicode.13.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/two_initial_conditions_3d_separate_2.png,
-  2025.
-\newblock Accessed: 2025-04-01.
-
-\bibitem{youngaryantwo_initial_conditions_3d_3separateICode}
-{\sc Golbaghi, A.}
-\newblock youngaryantwo_initial_conditions_3d_3separateicode.13.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/two_initial_conditions_3d_separate_3.png,
-  2025.
-\newblock Accessed: 2025-04-01.
-
-\bibitem{youngaryantwo_initial_conditions_3d_separateICode}
-{\sc Golbaghi, A.}
-\newblock youngaryantwo_initial_conditions_3d_separateicode.13.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.2.1/two_diff_initial_cond.py,
-  2025.
-\newblock Accessed: 2025-04-01.
-
-\bibitem{youngaryantwo_initial_conditions_3d_separateImg}
-{\sc Golbaghi, A.}
-\newblock youngaryantwo_initial_conditions_3d_separateimg.
-\newblock
-  https://github.com/youngaryan/COM3001_ASSIGN/blob/main/1.1.4/images/two_initial_conditions_3d_separate.png,
-  2025.
-\newblock Accessed: 2025-04-01.
 
 \bibitem{kashyap2024lorenz}
 {\sc Kashyap, S.~S., Dandekar, R.~A., Dandekar, R., and Panat, S.}

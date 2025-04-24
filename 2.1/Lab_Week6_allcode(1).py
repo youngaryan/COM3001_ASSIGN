@@ -371,7 +371,7 @@ def get_agent_counts(record):
 
 
 if __name__ == '__main__':
-    env = Environment(shape=[60,60],growrate=1600,maxgrass=50,startgrass=1)
+    env = Environment(shape=[60,60],growrate=60,maxgrass=50,startgrass=1)
     
     #create agents (rabbits and foxes)
     Nrabbits = 200
@@ -391,14 +391,57 @@ if __name__ == '__main__':
     # %%
     # %matplotlib inline
     counts = get_agent_counts(record)
-    plt.figure(figsize=[24, 6])
-    plt.plot(counts[:,0],label='foxes')
-    plt.plot(counts[:,1],label='rabbits')
-    plt.plot(counts[:,2]/20,'k-',label='grass') #/20 to get on same scale
-    plt.legend()
-    plt.grid()
-    plt.xlabel('Iteration')
-    plt.ylabel('Count');
-    plt.title('Ecolab simulation')
-    # plt.savefig('Ecolab_simulation_no_foxes.png', dpi=300)
+    # plt.figure(figsize=[24, 6])
+    # plt.plot(counts[:,0],label='foxes')
+    # plt.plot(counts[:,1],label='rabbits')
+    # plt.plot(counts[:,2]/20,'k-',label='grass') #/20 to get on same scale
+    # plt.legend()
+    # plt.grid()
+    # plt.xlabel('Iteration')
+    # plt.ylabel('Count');
+    # plt.title('Ecolab simulation')
+    # # plt.savefig('Ecolab_simulation_no_foxes.png', dpi=300)
+    # plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # After your existing line:
+# counts = get_agent_counts(record)
+
+    fig, axs = plt.subplots(3, 1, figsize=(10, 10), sharex=True)
+
+    # Foxes
+    axs[0].plot(counts[:, 0])
+    axs[0].set_ylabel('Fox Count', fontsize=12)
+    axs[0].set_title('Time Series of Fox Population', fontsize=14)
+    axs[0].grid(True)
+
+    # Rabbits
+    axs[1].plot(counts[:, 1])
+    axs[1].set_ylabel('Rabbit Count', fontsize=12)
+    axs[1].set_title('Time Series of Rabbit Population', fontsize=14)
+    axs[1].grid(True)
+
+    # Grass
+    axs[2].plot(counts[:, 2])
+    axs[2].set_xlabel('Iteration', fontsize=12)
+    axs[2].set_ylabel('Total Grass', fontsize=12)
+    axs[2].set_title('Time Series of Grass Population', fontsize=14)
+    axs[2].grid(True)
+
+    plt.tight_layout()
+    plt.savefig('population_time_series.png')  # Saves to the current directory
     plt.show()

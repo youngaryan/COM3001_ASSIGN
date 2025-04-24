@@ -51,51 +51,44 @@
 \newlabel{fig:error_comparison_rk4_stable_0.13}{{5}{13}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Trade-off between time step size $\Delta t$, numerical error, and computational cost in the RK4 method. The error decreases as $\Delta t$ becomes smaller (\( \propto \Delta t^4 \)), while the cost increases (\( \propto 1\div \Delta t \)). The product of error and cost, representing a total efficiency metric, is minimized near \( \Delta t = 0.01 \), indicating an optimal balance between accuracy and performance for simulating the Lorenz system.}}{14}{}\protected@file@percent }
 \newlabel{fig:error_trade_off_1_2_1}{{6}{14}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparison between reference system with \(\Delta t = 0.001\) and a less computationally expensive system with step size of \(\Delta t = 0.0073\), for this I used Optuna \cite  {akiba2019optuna} with 50 trials.}}{15}{}\protected@file@percent }
-\newlabel{fig:optuna_lorenz_3d}{{7}{15}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison between two similar initial conditions of (0.01, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of $\Delta t = 0.0073$ to show the chaotic behavior of the system.}}{15}{}\protected@file@percent }
-\newlabel{fig:two_initial_conditions_3d_separate}{{8}{15}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison between two similar initial conditions of (0.0, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of $\Delta t = 0.0073$ to show the chaotic behavior of the system.}}{16}{}\protected@file@percent }
-\newlabel{fig:two_initial_conditions_3d_separate_2}{{9}{16}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparison between two similar initial conditions of (1.0, 1.0, 1.0) and (1.0001, 1.0, 1.0) and the time steps of$\Delta t = 0.0073$ to show the chaotic behavior of the system.}}{16}{}\protected@file@percent }
-\newlabel{fig:two_initial_conditions_3d_separate_3}{{10}{16}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Simulation of a prey-predator system with the following initial settings: \texttt  {Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt  {Nrabbits = 200}, \texttt  {Nfoxes = 15}. Rabbits are initialized with \texttt  {speed=1}, \texttt  {vision=5}, \texttt  {breedfreq=10}, \texttt  {breedfood=10}, and \texttt  {maxage=40}. Foxes are initialized with \texttt  {speed=3}, \texttt  {vision=7}, \texttt  {breedfreq=30}, \texttt  {breedfood=20}, and \texttt  {maxage=80}.}}{17}{}\protected@file@percent }
-\newlabel{fig:Ecolab_pred_prey}{{11}{17}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Simulation of a prey-predator system with the following initial settings: \texttt  {Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt  {Nrabbits = 200}, \texttt  {Nfoxes = 15}. Rabbits are initialized with \texttt  {speed=1}, \texttt  {vision=5}, \texttt  {breedfreq=10}, \texttt  {breedfood=10}, and \texttt  {maxage=40}. And ero foxes.}}{17}{}\protected@file@percent }
-\newlabel{fig:Ecolab_pred_prey_no_foxes}{{12}{17}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces  Average final foxes vs growrate, recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run 1000 iterations. For more information see Table \ref {tab:simulation_stats_2.1}. }}{18}{}\protected@file@percent }
-\newlabel{fig:avg_final_foxes_vs_growrate_100_2.1}{{13}{18}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces  Final foxes by growrate, recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run 1000 iterations. For more information see Table \ref {tab:simulation_stats_2.1}. }}{19}{}\protected@file@percent }
-\newlabel{fig:boxplot_final_foxes_by_growrate_100_2.1}{{14}{19}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces  Final rabbits by growrate, recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run 1000 iterations. For more information see Table \ref {tab:simulation_stats_2.1}. }}{19}{}\protected@file@percent }
-\newlabel{fig:boxplot_final_rabbits_by_growrate_100_2.1}{{15}{19}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces  Fox extinction vs growrate, recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run 1000 iterations. For more information see Table \ref {tab:simulation_stats_2.1}. }}{20}{}\protected@file@percent }
-\newlabel{fig:fox_extinction_vs_growrate_100_2.1}{{16}{20}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {D}Tables}{21}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of Integration Methods}}{21}{}\protected@file@percent }
-\newlabel{tab:integration_methods}{{1}{21}{}{}{}}
-\newlabel{tab:diff_two_models_predator_prey}{{D}{21}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Comparison of Agent-Based Modeling (ABM) and Equation-Based Modeling (EBM)}}{21}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces  Descriptive statistics of key ecological variables recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run spanning up to 1000 iterations. The variables include the peak, minimum, and final values for the population of rabbits and foxes, as well as the amount of grass in the environment. These metrics provide insight into the dynamics of species interactions and resource availability, helping to evaluate ecosystem sustainability and identify scenarios that may lead to population collapse or resource depletion. See Figures \ref {fig:avg_final_foxes_vs_growrate_100_2.1}, \ref {fig:fox_extinction_vs_growrate_100_2.1}, \ref {fig:boxplot_final_foxes_by_growrate_100_2.1}, and \ref {fig:boxplot_final_rabbits_by_growrate_100_2.1} for the distribution of these metrics. }}{22}{}\protected@file@percent }
-\newlabel{tab:simulation_stats_2.1}{{3}{22}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparison between reference system with \(\Delta t = 0.001\) and a less computationally expensive system with step size of \(\Delta t = 0.01\)}}{15}{}\protected@file@percent }
+\newlabel{fig:0_001_lorenz_3d}{{7}{15}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison between reference system with \(\Delta t = 0.001\) and a less computationally expensive system with step size of \(\Delta t = 0.0073\), for this I used Optuna \cite  {akiba2019optuna} with 50 trials. as we can see this has a lower error than the previous one attempt with \(\Delta t = 0.01\). with the time step of \(\Delta t = 0.0073\) we have \((40 \div 0.0073 = 5479)\), with the time step of \(\Delta t = 0.01\) we have \((40 \div 0.01 = 4000)\) steps.}}{15}{}\protected@file@percent }
+\newlabel{fig:optuna_lorenz_3d}{{8}{15}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison between two similar initial conditions of (0.01, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of $\Delta t = 0.0073$ to show the chaotic behavior of the system.}}{16}{}\protected@file@percent }
+\newlabel{fig:two_initial_conditions_3d_separate}{{9}{16}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparison between two similar initial conditions of (0.0, 2.0, 1.0) and (0.1, 2.0, 1.0) and the time steps of $\Delta t = 0.0073$ to show the chaotic behavior of the system.}}{16}{}\protected@file@percent }
+\newlabel{fig:two_initial_conditions_3d_separate_2}{{10}{16}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Comparison between two similar initial conditions of (1.0, 1.0, 1.0) and (1.0001, 1.0, 1.0) and the time steps of$\Delta t = 0.0073$ to show the chaotic behavior of the system.}}{17}{}\protected@file@percent }
+\newlabel{fig:two_initial_conditions_3d_separate_3}{{11}{17}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Simulation of a prey-predator system with the following initial settings: \texttt  {Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt  {Nrabbits = 200}, \texttt  {Nfoxes = 15}. Rabbits are initialized with \texttt  {speed=1}, \texttt  {vision=5}, \texttt  {breedfreq=10}, \texttt  {breedfood=10}, and \texttt  {maxage=40}. Foxes are initialized with \texttt  {speed=3}, \texttt  {vision=7}, \texttt  {breedfreq=30}, \texttt  {breedfood=20}, and \texttt  {maxage=80}.}}{17}{}\protected@file@percent }
+\newlabel{fig:Ecolab_pred_prey}{{12}{17}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Simulation of a prey-predator system with the following initial settings: \texttt  {Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt  {Nrabbits = 200}, \texttt  {Nfoxes = 15}. Rabbits are initialized with \texttt  {speed=1}, \texttt  {vision=5}, \texttt  {breedfreq=10}, \texttt  {breedfood=10}, and \texttt  {maxage=40}. And no foxes.}}{17}{}\protected@file@percent }
+\newlabel{fig:Ecolab_pred_prey_no_foxes}{{13}{17}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Time series of total grass, rabbits and foxes units over 1000 iterations, this plot highlights correlation between the populations of the foxes and grass; as the fox population increases, grass abundance also tends to rise. This is expected, as a higher number of foxes leads to more rabbit being hunted, which in turn reduces the grass eaten by rabbits. Overall the system seems to be sustaining itself . Simulation of a prey-predator system with the following initial settings: \texttt  {Environment(shape=[60,60], growrate=60, maxgrass=50, startgrass=1)}, \texttt  {Nrabbits = 200}, \texttt  {Nfoxes = 15}. Rabbits are initialized with \texttt  {speed=1}, \texttt  {vision=5}, \texttt  {breedfreq=10}, \texttt  {breedfood=10}, and \texttt  {maxage=40}. Foxes are initialized with \texttt  {speed=3}, \texttt  {vision=7}, \texttt  {breedfreq=30}, \texttt  {breedfood=20}, and \texttt  {maxage=80}.}}{18}{}\protected@file@percent }
+\newlabel{fig:time_series}{{14}{18}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces  Average final foxes vs growrate, recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run 1000 iterations. For more information see Table \ref {tab:simulation_stats_2.1}. }}{19}{}\protected@file@percent }
+\newlabel{fig:avg_final_foxes_vs_growrate_100_2.1}{{15}{19}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces  Final foxes by growrate, recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run 1000 iterations. For more information see Table \ref {tab:simulation_stats_2.1}. }}{20}{}\protected@file@percent }
+\newlabel{fig:boxplot_final_foxes_by_growrate_100_2.1}{{16}{20}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces  Final rabbits by growrate, recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run 1000 iterations. For more information see Table \ref {tab:simulation_stats_2.1}. }}{20}{}\protected@file@percent }
+\newlabel{fig:boxplot_final_rabbits_by_growrate_100_2.1}{{17}{20}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces  Fox extinction vs growrate, recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run 1000 iterations. For more information see Table \ref {tab:simulation_stats_2.1}. }}{21}{}\protected@file@percent }
+\newlabel{fig:fox_extinction_vs_growrate_100_2.1}{{18}{21}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}Tables}{22}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of Integration Methods}}{22}{}\protected@file@percent }
+\newlabel{tab:integration_methods}{{1}{22}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Comparison of Agent-Based Modeling (ABM) and Equation-Based Modeling (EBM)}}{22}{}\protected@file@percent }
+\newlabel{tab:diff_two_models_predator_prey}{{2}{22}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces  Descriptive statistics of key ecological variables recorded across 100 independent simulation runs of the Agent-Based Model (ABM), with each run spanning up to 1000 iterations. The variables include the peak, minimum, and final values for the population of rabbits and foxes, as well as the amount of grass in the environment. These metrics provide insight into the dynamics of species interactions and resource availability, helping to evaluate ecosystem sustainability and identify scenarios that may lead to population collapse or resource depletion. See Figures \ref {fig:avg_final_foxes_vs_growrate_100_2.1}, \ref {fig:fox_extinction_vs_growrate_100_2.1}, \ref {fig:boxplot_final_foxes_by_growrate_100_2.1}, and \ref {fig:boxplot_final_rabbits_by_growrate_100_2.1} for the distribution of these metrics. }}{23}{}\protected@file@percent }
+\newlabel{tab:simulation_stats_2.1}{{3}{23}{}{}{}}
 \bibstyle{acm}
 \bibdata{references}
 \bibcite{akiba2019optuna}{1}
 \bibcite{armaos2024quantumcomputingatmosphericdynamics}{2}
-\bibcite{youngaryanerror_comparison_rk4_stable_0.13sCode}{3}
-\bibcite{youngaryanLorenzError1.1.41000_image}{4}
-\bibcite{youngaryanLorenzPlot1.1.4}{5}
-\bibcite{youngaryanOptunaCode}{6}
-\bibcite{youngaryanLorenzPlot1.1.4_image}{7}
-\bibcite{youngaryanLorenzError1.1.4_image}{8}
-\bibcite{youngaryanoptunaComparisonImage}{9}
-\bibcite{youngaryantwo_initial_conditions_3d_2separateICode}{10}
-\bibcite{youngaryantwo_initial_conditions_3d_3separateICode}{11}
-\bibcite{youngaryantwo_initial_conditions_3d_separateICode}{12}
-\bibcite{youngaryantwo_initial_conditions_3d_separateImg}{13}
-\bibcite{kashyap2024lorenz}{14}
-\bibcite{1963JAtS...20..130L}{15}
-\bibcite{Pathak_2017}{16}
-\bibcite{apsLorenz2003}{17}
-\@writefile{toc}{\contentsline {section}{\numberline {E}References}{23}{}\protected@file@percent }
-\gdef \@abspage@last{23}
+\bibcite{kashyap2024lorenz}{3}
+\bibcite{1963JAtS...20..130L}{4}
+\bibcite{Pathak_2017}{5}
+\bibcite{apsLorenz2003}{6}
+\@writefile{toc}{\contentsline {section}{\numberline {E}References}{24}{}\protected@file@percent }
+\gdef \@abspage@last{24}

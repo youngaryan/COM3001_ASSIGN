@@ -29,7 +29,7 @@ initial_conditions = [
 labels = [f"Initial Condition {i+1} ({ic[0]}, {ic[1]}, {ic[2]})" for i, ic in enumerate(initial_conditions)]
 # labels = ["Initial Condition 1 (0.1, 2.0, 1.0)", "Initial Condition 2 (0.01, 2.0, 1.0)"]
 tmax = 40.0
-dt = 0.0073
+dt = 0.01
 steps = int(tmax / dt)
 t = np.linspace(0, tmax, steps)
 
@@ -60,5 +60,5 @@ for i in range(2):
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
     ax.set_zlabel("Z")
-fig3d.savefig("1.1.4/images/two_initial_conditions_3d_separate_3.png", dpi=300)
+# fig3d.savefig("1.1.4/images/two_initial_conditions_3d_separate_3.png", dpi=300)
 plt.show()
