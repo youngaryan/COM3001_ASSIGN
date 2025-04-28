@@ -30,7 +30,7 @@ Although this formula is straightforward, the Euler method is only first order a
 
 RK4 is a more accurate method that uses intermediate calculations to achieve fourth-order accuracy. The RK4 update rule for the Lorenz system is given by the formula in the (appendix B\ref{eq:rk4_lorenz}). This method is more computationally intensive than Euler's method, but it provides a much better approximation of the true solution, especially for larger time steps.
 The RK4 method is particularly effective for systems like the Lorenz equations, where the dynamics can change rapidly. By using multiple intermediate steps to calculate the slope, RK4 captures the curvature of the solution trajectory more accurately than Euler's method, which only uses the slope at the beginning of the interval. This results in a more stable and accurate approximation of the system's behavior over time.
-The RK4 method is widely used in various fields, including physics, engineering, and finance, where accurate numerical solutions to differential equations are required. Its ability to handle stiff equations and chaotic systems makes it a valuable tool for researchers and practitioners.
+The RK4 method is widely used in various fields, including physics, engineering, and finance, where accurate numerical solutions to differential equations are required. Its ability to handle chaotic systems makes it a valuable tool for researchers and practitioners.
 
 \subsubsection{Time Step Analysis}
 
@@ -40,11 +40,11 @@ Choosing an appropriate $\Delta t$ is crucial:
     \item \textbf{Smaller} $\Delta t$ (e.g., 0.01, 0.001) improves accuracy by capturing more details of the system’s dynamics but increases computation expenses.
     \item \textbf{Larger} $\Delta t$ (e.g., 0.05, 0.08) may be computationally cheaper but can lead to numerical instability and incorrect behavior in the simulation.
 \end{itemize}
-While fixed time step methods such as Euler and RK4 are usefull, adaptive integration methods like Runge-Kutta-Fehlberg (RK45) can automatically adjust $\Delta t$ based on local error estimates. This adaptive control is particularly useful in chaotic systems, where the dynamics can vary significantly over time, ensuring both efficiency and robustness in long-term simulations. By dynamically allocating computational resources, reducing the step size in regions of rapid change and increasing it in smoother regions, adaptive methods not only maintain accuracy but also improve performance.
+While fixed time step methods such as Euler and RK4 are useful, adaptive integration methods like Runge-Kutta-Fehlberg (RK45) can automatically adjust $\Delta t$ based on local error estimates. This adaptive control is particularly useful in chaotic systems, where the dynamics can vary significantly over time, ensuring both efficiency and robustness in long-term simulations. By dynamically allocating computational resources, reducing the step size in regions of rapid change and increasing it in smoother regions, adaptive methods not only maintain accuracy but also improve performance.
 
 
 \subsubsection{Simulation and Results}
-The simulations were conducted using both the Explicit Euler and the Fourth-Order Runge-Kutta (RK4) methods over a total simulation time of 40 seconds. Several time step sizes were considered, ranging from small steps ($\Delta t = 0.001$) up to larger steps ($\Delta t = 0.1$). The results of the simulations are presented in the following figures \ref{fig:lorenz_vis}, \ref{fig:error_comparison1.1.4}:
+The simulations were conducted using both the Explicit Euler and the Fourth-Order Runge-Kutta (RK4) methods over a total simulation time of 40 seconds. Several time step sizes were considered, ranging from small steps ($\Delta t = 0.001$) up to larger steps ($\Delta t = 0.1$). The results of the simulations (alongside error analyses) are presented in the following Figures \ref{fig:lorenz_vis}, \ref{fig:error_comparison1.1.4}:
 
 
 My observations for different time steps are as follows:
@@ -55,7 +55,7 @@ My observations for different time steps are as follows:
 
 \textbf{Large} $\Delta t$ (0.1): Euler diverges dramatically. RK4 diverges from the solution too, however the RK4 method stays more loyal to the true solution.
 
-In figure \ref{fig:error_comparison1.1.4} shows that the Euler method is conditionally stable, meaning that for chaotic systems like the Lorenz system, even small time steps might lead to instability over long simulations, however the RK4 method has a larger stability region, which is why it can both stay stable and performs better at larger time steps compared to Euler.
+In figure \ref{fig:error_comparison1.1.4} shows that the Euler method is conditionally stable (same for RK4), meaning that for chaotic systems like the Lorenz system, even small time steps might lead to instability over long simulations, however the RK4 method has a larger stability region, which is why it can both stay stable and performs better at larger time steps compared to Euler.
 
 \subsubsection{Quantitative Error Analysis}
 

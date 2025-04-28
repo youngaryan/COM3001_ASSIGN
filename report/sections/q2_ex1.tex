@@ -6,21 +6,26 @@ In the simulation, we can see an oscillatory behavior of the populations, which 
 \begin{itemize}
     \item Grass (black curve) grows, fueling an increase in Rabbits (orange).
     \item As rabbits grow numbers, Foxes (blue) find abundant prey, so fox numbers grow.
-    \item Increasing the number of rabbits will cause to decrease the amount of grass (this is seen in Figure \ref{fig:Ecolab_pred_prey_no_foxes} too).
+    \item Increasing the number of rabbits will cause to decrease in the amount of grass (this is seen in Figure \ref{fig:Ecolab_pred_prey_no_foxes} too).
     \item Once foxes grow in numbers and the grass amount decreases because of the population of rabbits, the population of rabbits will decrease.
     \item As the number of rabbits decreases, the foxes will have less food, leading to a decrease in their population.
-    \item as there is less rabbits, the grass will grow again, and the cycle will repeat.
+    \item as there are fewer rabbits, the grass will grow again, and the cycle will repeat.
 \end{itemize}
 
-The intreating findings I can see from this simulation is even though the agent based model includes randomized movement and local interactions, the overall population still exhibits an oscillatory up and down cycles, similar to what we see in standard predator prey models (Lotka Volterra curves which mentioned in the lectures).
+The interesting findings I can see from this simulation is even though the agent based model includes randomized movement and local interactions, the overall population still exhibits an oscillatory up and down cycles, similar to what we see in standard predator prey models (Lotka Volterra curves which mentioned in the lectures).
 
 Figure \ref{fig:time_series} plots the time series of grass, rabbit, and fox populations over 1,000 iterations. As expected, the system exhibits sustained oscillations: grass increases first, followed by a rise in rabbits, then foxes; each predator peak is followed by a decline in prey and resources.
-\subsubsection{Differences between Agent Based Modeling vs Equation Based Modeling}
+
+
+To quantify random fluctuations under our default ABM parameters (growrate = 60, 200 rabbits, 15 foxes), we performed 100 independent simulations, each for 1000 iterations. Table \ref{tab:final-populations_baseline} gives the mean and SD of two key outcome metrics (final foxes and rabbits). Figure \ref{fig:base_line_fox_rabots} shows a bar chart of mean ± SD, and Figure \ref{fig:base_line_rabbit_hist} shows the full distribution of final rabbit counts.
+
+
+\subsubsection{Differences between Agent Based Modeling (ABM) vs Equation Based Modeling  (ODE)}
 
 In a classical equation based (ODE) predator prey model, such as Lotka Volterra equations, the dynamics of the populations are described by a set of ordinary differential equations (ODEs) that represent the average behavior of the populations over time. Its equations can be seen in the appendix B\ref{eq:predator_prey}.
 
 populations are treated as continuous, homogeneous averages. By contrast, agent based models (ABMs) track individual rabbits and foxes.
-I have summarized the key differences between these two models in the following (see this Table ~\ref{tab:diff_two_models_predator_prey}):
+I have summarized the key differences between these two models in the following (see Table ~\ref{tab:diff_two_models_predator_prey}):
 
 \begin{itemize}
     \item \textbf{Spatial Heterogeneity}
@@ -43,8 +48,8 @@ I have summarized the key differences between these two models in the following 
     
     \item \textbf{Emergent Behavior and Local Extinction}
     \begin{itemize}
-        \item \textbf{ABM:} Because movement is localized, pockets of rabbits or foxes can go extinct locally while others flourish elsewhere. Over time, random events can create drastically different patterns across multiple simulations.
-        \item \textbf{ODE:} Typically yields a single smooth trajectory for each initial condition—no chance of a local "pocket" dying off on its own.
+        \item \textbf{ABM:} Because movement is localized, clusters of rabbits or foxes can go extinct locally while others flourish elsewhere. Over time, random events can create drastically different patterns across multiple simulations.
+        \item \textbf{ODE:} Typically produces a single smooth trajectory for each initial condition—no chance of a local "cluster" dying off on its own.
     \end{itemize}
     
     \item \textbf{Complexity vs. Analytical Tractability}
